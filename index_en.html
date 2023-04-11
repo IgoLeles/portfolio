@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VERSÃO EM INGLÊS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background-color: #f1f1f1;
+            padding: 20px;
+        }
+
+        nav {
+            float: right;
+        }
+
+        nav button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            margin-left: 10px;
+            padding: 5px;
+        }
+
+        main {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <button id="pt-br">PT-BR</button>
+                <button id="en">EN</button>
+            </nav>
+        </div>
+
+        <header>
+            <div class="container">
+                <nav>
+                    <a href="index_en.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                   
+                </nav>
+            </div>
+        </header>
+        
+    </header>
+    <main>
+        <div class="container">
+            <h1>WELCOME!</h1>
+            <p>my work.</p>
+        </div>
+    </main>
+    <script>
+        document.getElementById('pt-br').addEventListener('click', function() {
+            document.querySelector('html').setAttribute('lang', 'pt-br');
+            // Atualize o conteúdo do site para português aqui
+        });
+
+        document.getElementById('en').addEventListener('click', function() {
+            document.querySelector('html').setAttribute('lang', 'en');
+            // Atualize o conteúdo do site para inglês aqui
+        });
+    </script>
+</body>
+</html>
