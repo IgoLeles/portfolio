@@ -14,6 +14,11 @@ html {
     font-size: 16px;
 }
 
+.important {
+    color: white;
+}
+
+
 img {
     max-width: 100%;
 }
@@ -252,22 +257,45 @@ p.paragrafo+p.paragrafo {
 
     /* Botões de idioma */
 
-.btn-language {
-    display: inline-block;
-    padding: 10px 15px;
-    background-color: #FF4500;
-    color: #FFFFFF;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-left: 10px;
-    font-weight: bold;
-    transition: background-color 0.3s, color 0.3s;
-}
+    .btn-language {
+        display: inline-block;
+        padding: 10px 15px;
+        background-color: #FF4500;
+        color: #FFFFFF;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-left: 10px;
+        font-weight: bold;
+        transition: background-color 0.3s, color 0.3s;
+        position: relative;
+        /* permite posicionar a bandeira */
+        padding-left: 32px;
+        /* espaço para a bandeira */
+        text-decoration: none;
+    }
 
-.btn-language:hover {
-    background-color: #FFFFFF;
-    color: #FF4500;
-}
+    .flag {
+        position: "absolute";
+        /* permite posicionar a bandeira */
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 24px;
+        /* ajuste o tamanho da bandeira conforme necessário */
+        height: 16px;
+    }
+
+    .flag img {
+        display: block;
+        /* remove o espaço em branco abaixo da imagem */
+        max-width: 100%;
+        /* garante que a imagem não ultrapasse o contêiner */
+    }
+
+    .btn-language:hover {
+        background-color: #FFFFFF;
+        color: #FF4500;
+    }
 
 
 }
