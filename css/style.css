@@ -290,12 +290,14 @@ p.paragrafo+p.paragrafo {
         /* remove o espaço em branco abaixo da imagem */
         max-width: 100%;
         /* garante que a imagem não ultrapasse o contêiner */
+        height: auto;
+        width: 20px;
+        /* ajuste o tamanho da largura conforme necessário */
+        height: 14px;
+        /* ajuste o tamanho da altura conforme necessário */
     }
 
     .btn-language:hover {
         background-color: #FFFFFF;
         color: #FF4500;
     }
-
-
-}
