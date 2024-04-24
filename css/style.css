@@ -58,7 +58,10 @@ p {
 header {
     width: 100%;
     height: auto;
-    background-color: #171810;
+    /* background-color: #020b19; */
+    background-color: #020819;
+
+
 
     display: flex;
 }
@@ -70,18 +73,20 @@ header div.container {
 
 .logo {
     max-width: 300px;
-    /* Defina uma largura máxima para a div */
 }
 
 .logo img {
     max-width: 100%;
-    /* Defina uma largura máxima para a imagem */
     height: auto;
-    /* Mantenha a proporção original da imagem */
     width: 130%;
     /* Aumente a largura da imagem em 50% */
 }
 
+.flag img {
+    width: 40px;
+    height: 30px;
+    margin-right: 10px; /* Adiciona um espaçamento entre as bandeiras */
+}
 
 nav {
     flex: 0 1 700px;
@@ -124,8 +129,12 @@ main {
     width: 100%;
     height: auto;
     margin: 0 auto;
-    background-color: #0c0c0c;
+    /* background-color: #0c0c0c; */
+    background-color: #020819;
+    
 }
+
+
 
 article {
     width: 100%;
@@ -157,7 +166,8 @@ section.lista {
 footer {
     text-align: center;
     padding: 15px;
-    background-color: #24292e;
+    /* background-color: #24292e; */
+    background-color: #020819;
     color: #fa1919;
 }
 
@@ -301,3 +311,4 @@ p.paragrafo+p.paragrafo {
         background-color: #FFFFFF;
         color: #FF4500;
     }
+}
