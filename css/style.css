@@ -77,7 +77,7 @@ header div.container {
 }
 
 /* Estilos para a logo na visualização móvel */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 450px) {
     .logo {
         max-width: 100px; /* Reduz o tamanho da logo */
         margin: 0 auto; /* Centraliza a logo */
