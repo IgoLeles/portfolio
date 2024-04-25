@@ -58,8 +58,8 @@ p {
 header {
     width: 100%;
     height: auto;
-    /* background-color: #020b19; */
-    background-color: #020819;
+    /* background-color: #0a0909; */
+    background-color: #1b1c1d;
 
 
 
@@ -71,14 +71,11 @@ header div.container {
     align-items: center
 }
 
-.logo {
-    max-width: 300px;
-}
+
 
 .logo img {
-    max-width: 100%;
+    max-width: 30%;
     height: auto;
-    width: 130%;
     /* Aumente a largura da imagem em 50% */
 }
 
@@ -270,7 +267,7 @@ p.paragrafo+p.paragrafo {
     .btn-language {
         display: inline-block;
         padding: 10px 15px;
-        background-color: #FF4500;
+        /* background-color: #FF4500; */
         color: #FFFFFF;
         text-decoration: none;
         border-radius: 5px;
