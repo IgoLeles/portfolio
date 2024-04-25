@@ -281,8 +281,8 @@ p.paragrafo+p.paragrafo {
         padding: 10px 15px;
         color: #FFFFFF;
         text-decoration: none;
-        border-radius: 5px;
-        margin-left: 10px;
+        /* margin-left: 10px; */
+        margin-right: 50px;
         font-weight: bold;
         transition: background-color 0.3s, color 0.3s;
         position: relative;
