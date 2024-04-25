@@ -37,7 +37,7 @@ span {
 
 a {
     text-decoration: none;
-    color: #000
+    color: #0d09eb
 }
 
 p {
@@ -46,6 +46,8 @@ p {
 }
 
 .container {
+    display: flex; /* Ativa o layout flexível */
+    align-items: center; /* Centraliza verticalmente os itens */
     width: 1300px;
     padding: 15px;
     display: flex;
@@ -59,14 +61,11 @@ header {
     width: 100%;
     height: auto;
     background-color: #1b1c1d;
-
-
-
     display: flex;
 }
 
 header div.container {
-    justify-content: space-between !important;
+    justify-content: space-between;
     align-items: center
 }
 
@@ -74,31 +73,36 @@ header div.container {
 .logo {
     max-width: 150px;
     margin-bottom: 10px;
+    margin-top: 10px;;
+    margin-left: 100px;
 }
 
 /* Estilos para a logo na visualização móvel */
 @media screen and (max-width: 450px) {
     .logo {
-        max-width: 100px; /* Reduz o tamanho da logo */
-        margin: 0 auto; /* Centraliza a logo */
-        margin-bottom: 20px; /* Adiciona mais espaço abaixo da logo */
+        max-width: 100px;
+        /* Reduz o tamanho da logo */
+        margin: 0 auto;
+        /* Centraliza a logo */
+        margin-bottom: 20px;
+        /* Adiciona mais espaço abaixo da logo */
     }
 }
-
-
 
 .flag img {
     width: 40px;
     height: 30px;
-    margin-right: 10px; 
+    margin-right: 10px;
 }
 
 .btn-language {
-    font-size: 10px; /* Altere o tamanho da fonte conforme desejado */
+    font-size: 10px;
+    /* Altere o tamanho da fonte conforme desejado */
 }
 
 nav {
-    flex: 0 1 700px;
+    flex: 1; /* Faz com que o elemento ocupe o espaço disponível */
+    margin-right: auto; /* Empurra o elemento para a direita */
 }
 
 nav ul {
@@ -106,28 +110,28 @@ nav ul {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
 
 nav ul li {
     width: 25%;
-    margin: 10px auto;
+    margin: 0 10px;
+    /* Adiciona uma margem de 10 pixels à esquerda e à direita de cada item do menu */
 }
 
 nav ul li a {
     display: block;
     text-align: center;
-    padding: 10px;
+    padding: 0 10px;
+    /* Adiciona um espaçamento interno de 10 pixels à esquerda e à direita de cada link */
     /* cor do texto dentro dos botões home, sobre, contato e inglês */
     color: #CCC;
     /* cor da borda do botão */
     border: 1px solid #CCC;
     border-radius: 5px;
     transition: all .5s ease-in-out;
+
 }
-
-
-
 
 nav ul li a:hover {
     background-color: #ccc125;
@@ -139,10 +143,8 @@ main {
     height: auto;
     margin: 0 auto;
     background-color: #020819;
-    
+
 }
-
-
 
 article {
     width: 100%;
@@ -175,7 +177,7 @@ footer {
     text-align: center;
     padding: 15px;
     background-color: #020819;
-    color: #fa1919;
+    color: #f5b400;
 }
 
 
@@ -277,7 +279,6 @@ p.paragrafo+p.paragrafo {
     .btn-language {
         display: inline-block;
         padding: 10px 15px;
-        /* background-color: #FF4500; */
         color: #FFFFFF;
         text-decoration: none;
         border-radius: 5px;
@@ -291,14 +292,29 @@ p.paragrafo+p.paragrafo {
         text-decoration: none;
     }
 
+    .nav-right {
+        display: flex; /* Ativa o layout flexível */
+        justify-content: flex-end; /* Alinha os itens à direita */
+        align-items: center; /* Centraliza verticalmente os itens */
+    }
+
+    .nav-right ul {
+        list-style: none; /* Remove a marcação da lista */
+        margin: 0; /* Remove as margens padrão */
+        padding: 0; /* Remove o preenchimento padrão */
+    }
+    
+    .nav-right li {
+        margin-left: 10px; /* Adiciona um espaçamento entre os itens */
+    }
+
     .flag {
-        position: "absolute";
+        position: "relative";
         /* permite posicionar a bandeira */
-        left: 0;
+        left: 0px;
         top: 50%;
         transform: translateY(-50%);
         width: 24px;
-        /* ajuste o tamanho da bandeira conforme necessário */
         height: 16px;
     }
 
