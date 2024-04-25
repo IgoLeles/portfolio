@@ -58,7 +58,6 @@ p {
 header {
     width: 100%;
     height: auto;
-    /* background-color: #0a0909; */
     background-color: #1b1c1d;
 
 
@@ -71,18 +70,31 @@ header div.container {
     align-items: center
 }
 
-
-
-.logo img {
-    max-width: 30%;
-    height: auto;
-    /* Aumente a largura da imagem em 50% */
+/* Estilos padrão para a logo */
+.logo {
+    max-width: 150px;
+    margin-bottom: 10px;
 }
+
+/* Estilos para a logo na visualização móvel */
+@media screen and (max-width: 600px) {
+    .logo {
+        max-width: 150px; /* Reduz o tamanho da logo */
+        margin: 0 auto; /* Centraliza a logo */
+        margin-bottom: 20px; /* Adiciona mais espaço abaixo da logo */
+    }
+}
+
+
 
 .flag img {
     width: 40px;
     height: 30px;
-    margin-right: 10px; /* Adiciona um espaçamento entre as bandeiras */
+    margin-right: 10px; 
+}
+
+.btn-language {
+    font-size: 10px; /* Altere o tamanho da fonte conforme desejado */
 }
 
 nav {
@@ -126,7 +138,6 @@ main {
     width: 100%;
     height: auto;
     margin: 0 auto;
-    /* background-color: #0c0c0c; */
     background-color: #020819;
     
 }
@@ -163,7 +174,6 @@ section.lista {
 footer {
     text-align: center;
     padding: 15px;
-    /* background-color: #24292e; */
     background-color: #020819;
     color: #fa1919;
 }
