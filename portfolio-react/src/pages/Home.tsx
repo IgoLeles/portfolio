@@ -3,7 +3,7 @@ export default function Home() {
 
   return (
     <section className="home-view">
-      <img src={`${assetBase}img/slide1.jpg`} alt="Imagem principal do portfolio" className="hero-image" />
+      <img src={`${assetBase}img/hero-home.png`} alt="Ambiente de desenvolvimento e segurança digital" className="hero-image" />
     </section>
   );
 }

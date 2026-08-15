@@ -10,6 +10,7 @@ const distDir = resolve(appDir, 'dist');
 const files = [
   ['index.html', 'index.html'],
   ['assets', 'assets'],
+  ['img/hero-home.png', 'img/hero-home.png'],
 ];
 
 if (!existsSync(distDir)) {
