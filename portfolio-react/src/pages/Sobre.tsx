@@ -79,8 +79,13 @@ export default function Sobre() {
         </p>
         <p>
           Também integro o Comitê Público do Instituto de Defesa Cibernética
-          (IDCiber), contribuindo com uma visão voltada à cultura de segurança
-          digital, colaboração institucional e defesa cibernética responsável.
+          {' '}
+          (
+          <a href="https://idciber.org/" target="_blank" rel="noreferrer">
+            IDCiber
+          </a>
+          ), contribuindo com uma visão voltada à cultura de segurança digital,
+          colaboração institucional e defesa cibernética responsável.
         </p>
 
         <div className="about-section">
