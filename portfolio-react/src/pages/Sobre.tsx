@@ -39,6 +39,10 @@ export default function Sobre() {
       label: 'Credly',
       href: 'https://credly.com/users/ilq',
     },
+    {
+      label: 'IDCiber',
+      href: 'https://idciber.org/',
+    },
   ];
 
   return (
@@ -73,6 +77,11 @@ export default function Sobre() {
           arquitetura de soluções, permitindo uma visão abrangente de qualidade,
           segurança e escalabilidade em ambientes corporativos.
         </p>
+        <p>
+          Também integro o Comitê Público do Instituto de Defesa Cibernética
+          (IDCiber), contribuindo com uma visão voltada à cultura de segurança
+          digital, colaboração institucional e defesa cibernética responsável.
+        </p>
 
         <div className="about-section">
           <h2>Especialidades</h2>
@@ -103,6 +112,12 @@ export default function Sobre() {
         <p className="availability">
           Aberto a oportunidades remotas, vagas internacionais e posições focadas em Salesforce.
         </p>
+
+        <img
+          src={`${assetBase}img/igo-brand-signature.png`}
+          alt="Igo Quaresma - Technology, Security, Human Insight"
+          className="brand-signature"
+        />
       </article>
     </section>
   );

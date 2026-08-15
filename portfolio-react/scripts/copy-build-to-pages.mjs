@@ -12,6 +12,7 @@ const files = [
   ['assets', 'assets'],
   ['img/hero-home.png', 'img/hero-home.png'],
   ['img/igo-profile-office.png', 'img/igo-profile-office.png'],
+  ['img/igo-brand-signature.png', 'img/igo-brand-signature.png'],
   ['img/osf-academy-concept.png', 'img/osf-academy-concept.png'],
   ['img/balf360-dashboard.png', 'img/balf360-dashboard.png'],
   ['img/balf360-certificate.png', 'img/balf360-certificate.png'],
