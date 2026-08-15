@@ -7,6 +7,7 @@ import Projetos from './pages/Projetos';
 import ProjetoOsfAcademy from './pages/ProjetoOsfAcademy';
 import ProjetoBalf360 from './pages/ProjetoBalf360';
 import ProjetoCalculadora from './pages/ProjetoCalculadora';
+import ProjetoListaTarefas from './pages/ProjetoListaTarefas';
 import ProjetoSalvadorAbas from './pages/ProjetoSalvadorAbas';
 import Contato from './pages/Contato';
 
@@ -23,6 +24,7 @@ export default function App() {
             <Route path="/projetos/osf-academy" element={<ProjetoOsfAcademy />} />
             <Route path="/projetos/balf360" element={<ProjetoBalf360 />} />
             <Route path="/projetos/calculadora" element={<ProjetoCalculadora />} />
+            <Route path="/projetos/lista-de-tarefas" element={<ProjetoListaTarefas />} />
             <Route path="/projetos/salvador-de-abas" element={<ProjetoSalvadorAbas />} />
             <Route path="/contato" element={<Contato />} />
           </Routes>

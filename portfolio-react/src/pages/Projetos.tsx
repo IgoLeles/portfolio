@@ -37,6 +37,8 @@ const projects = [
     title: 'Lista de Tarefas',
     description: 'Cadastro, conclusão, filtro e remoção de tarefas, com dados salvos no navegador.',
     stack: 'React, TypeScript, LocalStorage',
+    href: '/projetos/lista-de-tarefas',
+    cta: 'Testar projeto',
   },
   {
     level: 'Intermediário',
