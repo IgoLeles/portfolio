@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Sobre from './pages/Sobre';
 import Projetos from './pages/Projetos';
+import ProjetoOsfAcademy from './pages/ProjetoOsfAcademy';
 import Contato from './pages/Contato';
 
 export default function App() {
@@ -16,6 +17,7 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/sobre" element={<Sobre />} />
             <Route path="/projetos" element={<Projetos />} />
+            <Route path="/projetos/osf-academy" element={<ProjetoOsfAcademy />} />
             <Route path="/contato" element={<Contato />} />
           </Routes>
         </main>

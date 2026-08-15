@@ -1,9 +1,12 @@
+import { Link } from 'react-router-dom';
+
 const projects = [
   {
     level: 'Iniciante',
-    title: 'Landing Page Responsiva',
-    description: 'Página simples com cabeçalho, seção principal, botões e rodapé adaptados para celular.',
-    stack: 'HTML, CSS',
+    title: 'Landing Page Responsiva - OSF Academy',
+    description: 'Página de apresentação do portfólio Salesforce Developer Core, destacando entregas, tecnologias e aprendizados.',
+    stack: 'React, TypeScript, CSS',
+    href: '/projetos/osf-academy',
   },
   {
     level: 'Iniciante',
@@ -47,12 +50,22 @@ export default function Projetos() {
       </p>
       <div className="project-grid">
         {projects.map((project) => (
-          <article className="project-card" key={project.title}>
-            <span className="project-level">{project.level}</span>
-            <h2>{project.title}</h2>
-            <p>{project.description}</p>
-            <small>{project.stack}</small>
-          </article>
+          project.href ? (
+            <Link to={project.href} className="project-card project-card-link" key={project.title}>
+              <span className="project-level">{project.level}</span>
+              <h2>{project.title}</h2>
+              <p>{project.description}</p>
+              <small>{project.stack}</small>
+              <strong>Ver landing page</strong>
+            </Link>
+          ) : (
+            <article className="project-card" key={project.title}>
+              <span className="project-level">{project.level}</span>
+              <h2>{project.title}</h2>
+              <p>{project.description}</p>
+              <small>{project.stack}</small>
+            </article>
+          )
         ))}
       </div>
     </section>
