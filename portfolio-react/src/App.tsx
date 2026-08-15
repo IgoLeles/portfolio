@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Sobre from './pages/Sobre';
 import Projetos from './pages/Projetos';
 import ProjetoOsfAcademy from './pages/ProjetoOsfAcademy';
+import ProjetoBalf360 from './pages/ProjetoBalf360';
 import Contato from './pages/Contato';
 
 export default function App() {
@@ -18,6 +19,7 @@ export default function App() {
             <Route path="/sobre" element={<Sobre />} />
             <Route path="/projetos" element={<Projetos />} />
             <Route path="/projetos/osf-academy" element={<ProjetoOsfAcademy />} />
+            <Route path="/projetos/balf360" element={<ProjetoBalf360 />} />
             <Route path="/contato" element={<Contato />} />
           </Routes>
         </main>

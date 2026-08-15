@@ -9,6 +9,14 @@ const projects = [
     href: '/projetos/osf-academy',
   },
   {
+    level: 'Intermediário',
+    title: 'BALF360 - Jornada Salesforce',
+    description: 'Case visual sobre a Operação Vértice, reunindo formação, gamificação, conquistas e prática com Flow, Data 360, Agentforce e Apex.',
+    stack: 'Salesforce, Agentforce, Data 360',
+    href: '/projetos/balf360',
+    cta: 'Ver case',
+  },
+  {
     level: 'Iniciante',
     title: 'Calculadora Básica',
     description: 'Interface para operações simples, praticando eventos, estados e organização de componentes.',
@@ -56,7 +64,7 @@ export default function Projetos() {
               <h2>{project.title}</h2>
               <p>{project.description}</p>
               <small>{project.stack}</small>
-              <strong>Ver landing page</strong>
+              <strong>{project.cta ?? 'Ver landing page'}</strong>
             </Link>
           ) : (
             <article className="project-card" key={project.title}>

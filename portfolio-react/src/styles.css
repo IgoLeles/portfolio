@@ -456,6 +456,50 @@ a {
   font-weight: 700;
 }
 
+.balf-page .case-hero h1 {
+  color: #ff5b00;
+}
+
+.balf-stats {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.balf-stats div {
+  min-height: 116px;
+  padding: 18px;
+  border: 1px solid rgba(255, 91, 0, 0.38);
+  border-radius: 8px;
+  background: rgba(255, 91, 0, 0.05);
+}
+
+.balf-stats strong {
+  display: block;
+  color: #ff5b00;
+  font-size: 1.65rem;
+}
+
+.balf-stats span {
+  color: #d8dbe8;
+  line-height: 1.4;
+}
+
+.visual-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.visual-gallery a {
+  min-width: 0;
+}
+
+.visual-gallery img {
+  height: 100%;
+}
+
 .case-wide {
   margin-top: 18px;
 }
@@ -562,10 +606,19 @@ a {
     width: 100%;
     text-align: center;
   }
+
+  .balf-stats,
+  .visual-gallery {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (min-width: 721px) and (max-width: 980px) {
   .project-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .balf-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
