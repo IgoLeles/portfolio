@@ -45,6 +45,8 @@ const projects = [
     title: 'Buscador de CEP',
     description: 'Consulta de endereço por CEP, exibindo estados de carregamento, erro e resultado.',
     stack: 'React, TypeScript, API',
+    href: '/projetos/buscador-de-cep',
+    cta: 'Testar projeto',
   },
   {
     level: 'Avançado',
