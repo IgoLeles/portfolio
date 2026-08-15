@@ -140,6 +140,11 @@ export default function ProjetoListaTarefas() {
               Compartilhar resumo
             </a>
           </div>
+          <p className="integration-note">
+            O botão usa um link de compartilhamento do WhatsApp para abrir o app ou
+            WhatsApp Web com o resumo preenchido. Não utiliza webhook, API Business
+            nem credenciais externas.
+          </p>
         </div>
 
         <aside className="case-summary">
@@ -251,7 +256,7 @@ export default function ProjetoListaTarefas() {
             <li>Cadastro e remoção de tarefas com atualização imediata da interface.</li>
             <li>Marcação de tarefas concluídas e filtros por status ou prazo.</li>
             <li>Dados salvos no navegador com LocalStorage.</li>
-            <li>Compartilhamento por link com resumo textual da lista.</li>
+            <li>Compartilhamento por link com resumo textual da lista, sem backend.</li>
           </ul>
         </article>
 
