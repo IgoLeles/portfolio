@@ -28,6 +28,9 @@ const stack = [
 ];
 
 export default function ProjetoOsfAcademy() {
+  const assetBase = import.meta.env.BASE_URL;
+  const conceptImage = `${assetBase}img/osf-academy-concept.png`;
+
   return (
     <section className="case-page">
       <Link to="/projetos" className="back-link">Voltar para projetos</Link>
@@ -68,6 +71,23 @@ export default function ProjetoOsfAcademy() {
           ))}
         </aside>
       </div>
+
+      <article className="case-panel case-visual">
+        <div>
+          <h2>Visual do projeto</h2>
+          <p>
+            Um mapa conceitual das principais partes da entrega: automações, integrações,
+            componente LWC, testes e processamento assíncrono conectados em uma visão única.
+          </p>
+        </div>
+        <a href={conceptImage} target="_blank" rel="noreferrer" aria-label="Abrir visual do projeto em tamanho maior">
+          <img
+            src={conceptImage}
+            alt="Mapa conceitual visual do projeto Salesforce Developer Core"
+          />
+          <span>Clique para ampliar</span>
+        </a>
+      </article>
 
       <div className="case-grid">
         <article className="case-panel">

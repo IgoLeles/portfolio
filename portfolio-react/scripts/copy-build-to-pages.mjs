@@ -12,6 +12,7 @@ const files = [
   ['assets', 'assets'],
   ['img/hero-home.png', 'img/hero-home.png'],
   ['img/igo-profile-office.png', 'img/igo-profile-office.png'],
+  ['img/osf-academy-concept.png', 'img/osf-academy-concept.png'],
 ];
 
 if (!existsSync(distDir)) {
