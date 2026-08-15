@@ -16,6 +16,9 @@ const files = [
   ['img/osf-academy-concept.png', 'img/osf-academy-concept.png'],
   ['img/balf360-dashboard.png', 'img/balf360-dashboard.png'],
   ['img/balf360-certificate.png', 'img/balf360-certificate.png'],
+  ['img/tab-saver-interface.png', 'img/tab-saver-interface.png'],
+  ['img/tab-saver-export.png', 'img/tab-saver-export.png'],
+  ['img/tab-saver-links.png', 'img/tab-saver-links.png'],
 ];
 
 if (!existsSync(distDir)) {

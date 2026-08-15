@@ -21,6 +21,16 @@ const projects = [
     title: 'Calculadora Básica',
     description: 'Interface para operações simples, praticando eventos, estados e organização de componentes.',
     stack: 'JavaScript, React',
+    href: '/projetos/calculadora',
+    cta: 'Testar projeto',
+  },
+  {
+    level: 'Iniciante',
+    title: 'Salvador de Abas',
+    description: 'Extensão para selecionar abas abertas e exportar links organizados em um arquivo HTML.',
+    stack: 'JavaScript, Chrome Extensions',
+    href: '/projetos/salvador-de-abas',
+    cta: 'Ver case',
   },
   {
     level: 'Intermediário',

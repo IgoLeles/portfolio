@@ -516,8 +516,96 @@ a {
   height: 100%;
 }
 
+.visual-gallery-three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .case-wide {
   margin-top: 18px;
+}
+
+.calculator-page .case-hero h1 {
+  color: #f5b400;
+}
+
+.calculator-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 420px) 1fr;
+  gap: 18px;
+  align-items: stretch;
+}
+
+.calculator-shell {
+  padding: 22px;
+  border: 1px solid rgba(245, 180, 0, 0.38);
+  border-radius: 8px;
+  background: #0f1525;
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.28);
+}
+
+.calculator-display {
+  min-height: 122px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 16px;
+  padding: 18px;
+  border: 1px solid rgba(245, 180, 0, 0.22);
+  border-radius: 8px;
+  background: #020819;
+  overflow: hidden;
+  text-align: right;
+}
+
+.calculator-display span {
+  color: #9299ad;
+  font-size: 0.96rem;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.calculator-display strong {
+  color: #ffffff;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  line-height: 1;
+  overflow-wrap: anywhere;
+}
+
+.calculator-keypad {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.calculator-key {
+  min-height: 58px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.07);
+  color: #ffffff;
+  font: inherit;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 180ms ease, transform 180ms ease, border-color 180ms ease;
+}
+
+.calculator-key:hover {
+  transform: translateY(-2px);
+  border-color: rgba(245, 180, 0, 0.44);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.calculator-key-action {
+  color: #f5b400;
+  background: rgba(245, 180, 0, 0.1);
+}
+
+.calculator-key-equals {
+  grid-column: span 2;
+  background: #f5b400;
+  color: #1b1c1d;
 }
 
 .contact-view {
@@ -614,7 +702,8 @@ a {
 
   .case-hero,
   .case-grid,
-  .case-visual {
+  .case-visual,
+  .calculator-layout {
     grid-template-columns: 1fr;
   }
 
@@ -624,7 +713,8 @@ a {
   }
 
   .balf-stats,
-  .visual-gallery {
+  .visual-gallery,
+  .visual-gallery-three {
     grid-template-columns: 1fr;
   }
 }
