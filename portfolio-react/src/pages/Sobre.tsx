@@ -16,6 +16,7 @@ export default function Sobre() {
     'JavaScript',
     'AWS',
     'DevSecOps',
+    'COBOL (em estudo)',
   ];
 
   const credentials = [
@@ -76,6 +77,10 @@ export default function Sobre() {
           Minha trajetória combina desenvolvimento de software, cibersegurança e
           arquitetura de soluções, permitindo uma visão abrangente de qualidade,
           segurança e escalabilidade em ambientes corporativos.
+        </p>
+        <p>
+          Também estou iniciando estudos em COBOL, com foco em manutenção,
+          modernização e integração de sistemas legados em ambientes corporativos.
         </p>
         <p>
           Também integro o Comitê Público do Instituto de Defesa Cibernética
