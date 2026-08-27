@@ -20,6 +20,7 @@ const files = [
   ['img/tab-saver-export.png', 'img/tab-saver-export.png'],
   ['img/tab-saver-links.png', 'img/tab-saver-links.png'],
   ['img/todo-share-concept.png', 'img/todo-share-concept.png'],
+  ['img/salesforce-portfolio-app-concept.png', 'img/salesforce-portfolio-app-concept.png'],
 ];
 
 if (!existsSync(distDir)) {

@@ -955,6 +955,70 @@ a {
   justify-content: center;
 }
 
+.salesforce-portfolio-page .case-hero h1 {
+  color: #4fc3ff;
+}
+
+.salesforce-portfolio-page .case-summary div,
+.salesforce-portfolio-page .case-panel {
+  border-color: rgba(79, 195, 255, 0.3);
+}
+
+.salesforce-portfolio-page .case-summary span {
+  color: #19d08f;
+}
+
+.salesforce-portfolio-page .case-tags span {
+  background: rgba(79, 195, 255, 0.13);
+  color: #9addff;
+}
+
+.salesforce-architecture {
+  grid-template-columns: 360px 1fr;
+}
+
+.salesforce-architecture a {
+  border-color: rgba(79, 195, 255, 0.34);
+}
+
+.salesforce-architecture span {
+  color: #9addff;
+}
+
+.data-model-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.data-model-grid div {
+  min-height: 150px;
+  padding: 18px;
+  border: 1px solid rgba(79, 195, 255, 0.24);
+  border-radius: 8px;
+  background: rgba(2, 8, 25, 0.66);
+}
+
+.data-model-grid strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #ffffff;
+  font-size: 1.05rem;
+}
+
+.data-model-grid p {
+  margin: 0;
+  font-size: 0.98rem;
+}
+
+.github-safety-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.42fr);
+  gap: 24px;
+  align-items: center;
+}
+
 .contact-view {
   min-height: 45vh;
   display: flex;
@@ -1052,7 +1116,9 @@ a {
   .case-visual,
   .calculator-layout,
   .todo-layout,
-  .cep-layout {
+  .cep-layout,
+  .data-model-grid,
+  .github-safety-panel {
     grid-template-columns: 1fr;
   }
 

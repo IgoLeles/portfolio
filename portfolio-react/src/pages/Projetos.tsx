@@ -50,6 +50,14 @@ const projects = [
   },
   {
     level: 'Avançado',
+    title: 'Salesforce Portfolio App',
+    description: 'Case de portfólio dentro da Salesforce, com objetos customizados, relatórios, dashboard e publicação via Experience Cloud.',
+    stack: 'Salesforce Admin, Experience Cloud',
+    href: '/projetos/salesforce-portfolio-app',
+    cta: 'Ver arquitetura',
+  },
+  {
+    level: 'Avançado',
     title: 'Dashboard Financeiro',
     description: 'Painel com cards, filtros e gráficos para acompanhar entradas, saídas e saldo mensal.',
     stack: 'React, TypeScript, Charts',

@@ -9,6 +9,7 @@ import ProjetoBalf360 from './pages/ProjetoBalf360';
 import ProjetoBuscadorCep from './pages/ProjetoBuscadorCep';
 import ProjetoCalculadora from './pages/ProjetoCalculadora';
 import ProjetoListaTarefas from './pages/ProjetoListaTarefas';
+import ProjetoSalesforcePortfolioApp from './pages/ProjetoSalesforcePortfolioApp';
 import ProjetoSalvadorAbas from './pages/ProjetoSalvadorAbas';
 import Contato from './pages/Contato';
 
@@ -27,6 +28,7 @@ export default function App() {
             <Route path="/projetos/buscador-de-cep" element={<ProjetoBuscadorCep />} />
             <Route path="/projetos/calculadora" element={<ProjetoCalculadora />} />
             <Route path="/projetos/lista-de-tarefas" element={<ProjetoListaTarefas />} />
+            <Route path="/projetos/salesforce-portfolio-app" element={<ProjetoSalesforcePortfolioApp />} />
             <Route path="/projetos/salvador-de-abas" element={<ProjetoSalvadorAbas />} />
             <Route path="/contato" element={<Contato />} />
           </Routes>
