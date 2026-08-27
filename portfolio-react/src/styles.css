@@ -86,14 +86,27 @@ a {
 
 .home-view {
   width: 100%;
+  min-height: calc(100vh - 132px);
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #020819 0%, #061122 48%, #020819 100%);
+}
+
+.home-banner-frame {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid rgba(245, 180, 0, 0.24);
+  border-radius: 8px;
+  background: #020819;
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.34);
 }
 
 .hero-image {
   width: 100%;
-  max-height: calc(100vh - 144px);
-  min-height: 360px;
   display: block;
-  object-fit: cover;
+  aspect-ratio: 3 / 1;
+  object-fit: contain;
   object-position: center;
 }
 
@@ -1090,7 +1103,7 @@ a {
   }
 
   .hero-image {
-    min-height: 280px;
+    aspect-ratio: 3 / 1;
   }
 
   .about-view {

@@ -3,7 +3,9 @@ export default function Home() {
 
   return (
     <section className="home-view">
-      <img src={`${assetBase}img/hero-home.png`} alt="Ambiente de desenvolvimento e segurança digital" className="hero-image" />
+      <div className="home-banner-frame">
+        <img src={`${assetBase}img/hero-home.png`} alt="Igo Quaresma - Technology, Security, Human Insight" className="hero-image" />
+      </div>
     </section>
   );
 }
