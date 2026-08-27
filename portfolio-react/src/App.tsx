@@ -8,7 +8,9 @@ import ProjetoOsfAcademy from './pages/ProjetoOsfAcademy';
 import ProjetoBalf360 from './pages/ProjetoBalf360';
 import ProjetoBuscadorCep from './pages/ProjetoBuscadorCep';
 import ProjetoCalculadora from './pages/ProjetoCalculadora';
+import ProjetoDashboardFinanceiro from './pages/ProjetoDashboardFinanceiro';
 import ProjetoListaTarefas from './pages/ProjetoListaTarefas';
+import ProjetoMiniEcommerce from './pages/ProjetoMiniEcommerce';
 import ProjetoSalesforcePortfolioApp from './pages/ProjetoSalesforcePortfolioApp';
 import ProjetoSalvadorAbas from './pages/ProjetoSalvadorAbas';
 import Contato from './pages/Contato';
@@ -27,7 +29,9 @@ export default function App() {
             <Route path="/projetos/balf360" element={<ProjetoBalf360 />} />
             <Route path="/projetos/buscador-de-cep" element={<ProjetoBuscadorCep />} />
             <Route path="/projetos/calculadora" element={<ProjetoCalculadora />} />
+            <Route path="/projetos/dashboard-financeiro" element={<ProjetoDashboardFinanceiro />} />
             <Route path="/projetos/lista-de-tarefas" element={<ProjetoListaTarefas />} />
+            <Route path="/projetos/mini-ecommerce" element={<ProjetoMiniEcommerce />} />
             <Route path="/projetos/salesforce-portfolio-app" element={<ProjetoSalesforcePortfolioApp />} />
             <Route path="/projetos/salvador-de-abas" element={<ProjetoSalvadorAbas />} />
             <Route path="/contato" element={<Contato />} />

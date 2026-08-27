@@ -61,12 +61,16 @@ const projects = [
     title: 'Dashboard Financeiro',
     description: 'Painel com cards, filtros e gráficos para acompanhar entradas, saídas e saldo mensal.',
     stack: 'React, TypeScript, Charts',
+    href: '/projetos/dashboard-financeiro',
+    cta: 'Testar dashboard',
   },
   {
     level: 'Avançado',
     title: 'Mini E-commerce',
     description: 'Catálogo, busca, carrinho e resumo de compra para demonstrar fluxo completo de interface.',
     stack: 'React, TypeScript, Estado Global',
+    href: '/projetos/mini-ecommerce',
+    cta: 'Testar loja',
   },
 ];
 

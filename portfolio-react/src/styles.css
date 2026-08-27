@@ -1032,6 +1032,377 @@ a {
   align-items: center;
 }
 
+.finance-page .case-hero h1 {
+  color: #19d08f;
+}
+
+.finance-dashboard,
+.shop-layout {
+  display: grid;
+  gap: 18px;
+}
+
+.finance-toolbar,
+.finance-panel,
+.cart-panel,
+.shop-toolbar,
+.product-card {
+  border: 1px solid rgba(25, 208, 143, 0.28);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.finance-toolbar {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  padding: 18px;
+}
+
+.finance-toolbar label,
+.shop-toolbar label {
+  display: block;
+  margin-bottom: 8px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.finance-toolbar select,
+.shop-toolbar input {
+  width: 100%;
+  min-height: 46px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  background: #020819;
+  color: #ffffff;
+  font: inherit;
+  padding: 0 12px;
+}
+
+.finance-kpis {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.finance-kpis div {
+  min-height: 112px;
+  padding: 18px;
+  border: 1px solid rgba(245, 180, 0, 0.28);
+  border-radius: 8px;
+  background: rgba(2, 8, 25, 0.72);
+}
+
+.finance-kpis span,
+.cart-panel span,
+.finance-table span,
+.category-bars span {
+  color: #9299ad;
+}
+
+.finance-kpis strong {
+  display: block;
+  margin-top: 12px;
+  color: #ffffff;
+  font-size: 1.35rem;
+}
+
+.finance-grid,
+.shop-layout {
+  grid-template-columns: minmax(0, 1fr) minmax(340px, 0.42fr);
+}
+
+.finance-panel,
+.cart-panel,
+.shop-toolbar {
+  padding: 22px;
+}
+
+.finance-panel h2,
+.cart-panel h2 {
+  margin: 0 0 16px;
+  color: #ffffff;
+}
+
+.bar-chart {
+  height: 260px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  align-items: end;
+  padding: 18px 8px 0;
+}
+
+.bar-group {
+  min-width: 0;
+  display: grid;
+  gap: 10px;
+  text-align: center;
+}
+
+.bars {
+  height: 210px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  gap: 8px;
+}
+
+.bars span {
+  width: 24px;
+  min-height: 8px;
+  border-radius: 8px 8px 0 0;
+}
+
+.bar-income,
+.category-bars strong,
+.money-in {
+  color: #19d08f;
+}
+
+.bar-income {
+  background: #19d08f;
+}
+
+.bar-expense {
+  background: #ff6b6b;
+}
+
+.money-out {
+  color: #ff8f8f;
+}
+
+.chart-legend {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  color: #d8dbe8;
+  font-size: 0.92rem;
+}
+
+.chart-legend span::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  margin-right: 7px;
+  border-radius: 50%;
+  background: #19d08f;
+}
+
+.chart-legend span + span::before {
+  background: #ff6b6b;
+}
+
+.category-bars {
+  display: grid;
+  gap: 16px;
+}
+
+.category-bars div {
+  display: grid;
+  gap: 8px;
+}
+
+.category-bars div div {
+  height: 12px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.category-bars strong {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: #19d08f;
+}
+
+.category-bars small {
+  color: #d8dbe8;
+}
+
+.finance-table {
+  display: grid;
+  gap: 10px;
+}
+
+.finance-table div {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 140px 100px 130px;
+  gap: 12px;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.finance-table strong,
+.cart-item strong {
+  color: #ffffff;
+}
+
+.ecommerce-page .case-hero h1 {
+  color: #f5b400;
+}
+
+.shop-layout {
+  align-items: start;
+}
+
+.shop-catalog {
+  display: grid;
+  gap: 18px;
+}
+
+.shop-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.shop-categories button,
+.product-card button,
+.cart-item button,
+.checkout-button {
+  border: 1px solid rgba(245, 180, 0, 0.34);
+  border-radius: 8px;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.06);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.shop-categories button {
+  min-height: 36px;
+  padding: 0 12px;
+}
+
+.shop-categories button.active,
+.product-card button,
+.checkout-button {
+  background: #f5b400;
+  color: #1b1c1d;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.product-card {
+  min-height: 250px;
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  padding: 20px;
+}
+
+.product-card span {
+  width: fit-content;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(245, 180, 0, 0.16);
+  color: #f5b400;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.product-card h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+
+.product-card p {
+  margin: 0;
+  color: #d8dbe8;
+  line-height: 1.6;
+}
+
+.product-card strong {
+  color: #f5b400;
+  font-size: 1.25rem;
+}
+
+.product-card button,
+.checkout-button {
+  min-height: 44px;
+}
+
+.cart-panel {
+  position: sticky;
+  top: 24px;
+  display: grid;
+  gap: 18px;
+  border-color: rgba(245, 180, 0, 0.34);
+}
+
+.cart-items {
+  display: grid;
+  gap: 12px;
+}
+
+.cart-items p {
+  margin: 0;
+  color: #d8dbe8;
+  line-height: 1.6;
+}
+
+.cart-item {
+  display: grid;
+  gap: 8px;
+  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  background: rgba(2, 8, 25, 0.72);
+}
+
+.cart-item div {
+  display: grid;
+  grid-template-columns: 34px 42px 34px;
+  gap: 8px;
+  align-items: center;
+}
+
+.cart-item button {
+  min-height: 34px;
+}
+
+.cart-item small {
+  text-align: center;
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.cart-summary {
+  display: grid;
+  gap: 10px;
+}
+
+.cart-summary div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: #d8dbe8;
+}
+
+.cart-summary div:last-child {
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.cart-summary strong {
+  color: #ffffff;
+}
+
+.checkout-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.58;
+}
+
 .contact-view {
   min-height: 45vh;
   display: flex;
@@ -1131,7 +1502,13 @@ a {
   .todo-layout,
   .cep-layout,
   .data-model-grid,
-  .github-safety-panel {
+  .github-safety-panel,
+  .finance-toolbar,
+  .finance-kpis,
+  .finance-grid,
+  .finance-table div,
+  .shop-layout,
+  .product-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1151,6 +1528,10 @@ a {
 
   .cep-map-actions a {
     width: 100%;
+  }
+
+  .cart-panel {
+    position: static;
   }
 
   .case-actions a {
