@@ -18,9 +18,9 @@ const learningPath = [
 ];
 
 const outcomes = [
-  'Jornada prática, seletiva e gamificada, com presença, missões e acompanhamento.',
-  'Construção de repertório técnico para atuar com automação, dados, IA e desenvolvimento Salesforce.',
-  'Síntese pública de conquistas, certificado e evidências visuais para reforçar a narrativa profissional.',
+  'Vivência prática em uma jornada seletiva e gamificada, com presença, missões e acompanhamento.',
+  'Ampliação de repertório técnico para atuar com automação, dados, IA e desenvolvimento Salesforce.',
+  'Organização de conquistas, certificado e evidências visuais como parte da minha evolução profissional.',
 ];
 
 export default function ProjetoBalf360() {
@@ -115,10 +115,10 @@ export default function ProjetoBalf360() {
         </article>
 
         <article className="case-panel">
-          <h2>Resultado para o portfólio</h2>
+          <h2>Aprendizados aplicados</h2>
           <p>
-            O case apresenta a formação como uma experiência aplicada, conectando estudo,
-            disciplina, comunidade e evolução técnica.
+            A formação conectou estudo, disciplina, comunidade e prática técnica em uma
+            experiência próxima de desafios reais do ecossistema Salesforce.
           </p>
           <ul>
             {outcomes.map((item) => (
@@ -129,12 +129,12 @@ export default function ProjetoBalf360() {
       </div>
 
       <article className="case-panel case-wide">
-        <h2>Por que isso importa</h2>
+        <h2>Impacto na jornada Salesforce</h2>
         <p>
-          O BALF360 complementa o case OSF Academy: enquanto a OSF evidencia entregas de
-          código e testes, o BALF360 mostra uma jornada intensa de formação Salesforce com
-          gamificação, prática orientada, IA, dados e automação. Juntos, os dois cases
-          fortalecem a narrativa de evolução para o ecossistema Salesforce.
+          O BALF360 complementou minha base construída na OSF Academy. Enquanto a OSF
+          trouxe entregas de código, testes e estrutura de desenvolvimento, o BALF360
+          ampliou minha visão sobre prática orientada, IA, dados, automação e colaboração
+          dentro do universo Salesforce.
         </p>
       </article>
     </section>
