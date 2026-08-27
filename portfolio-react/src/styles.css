@@ -1403,6 +1403,238 @@ a {
   opacity: 0.58;
 }
 
+.devsecops-page .case-hero h1 {
+  color: #9addff;
+}
+
+.devsecops-page .case-summary div,
+.devsecops-page .case-panel {
+  border-color: rgba(154, 221, 255, 0.28);
+}
+
+.devsecops-shell {
+  display: grid;
+  gap: 18px;
+}
+
+.readiness-panel,
+.devsecops-controls,
+.security-item,
+.security-report {
+  border: 1px solid rgba(154, 221, 255, 0.28);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.readiness-panel {
+  display: grid;
+  gap: 16px;
+  padding: 22px;
+}
+
+.readiness-panel div:first-child {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: center;
+}
+
+.readiness-panel span,
+.security-report span {
+  color: #9299ad;
+}
+
+.readiness-panel strong {
+  color: #ffffff;
+  font-size: 1.45rem;
+}
+
+.readiness-track {
+  height: 16px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.readiness-track span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #19d08f, #9addff, #f5b400);
+}
+
+.readiness-counters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.readiness-counters span {
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: rgba(154, 221, 255, 0.1);
+  color: #d8dbe8;
+  font-weight: 700;
+}
+
+.devsecops-controls {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 180px 180px;
+  gap: 12px;
+  padding: 18px;
+  align-items: end;
+}
+
+.devsecops-controls label {
+  display: block;
+  margin-bottom: 8px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.devsecops-controls select,
+.devsecops-controls button,
+.status-options button {
+  min-height: 44px;
+  border: 1px solid rgba(154, 221, 255, 0.28);
+  border-radius: 8px;
+  background: #020819;
+  color: #ffffff;
+  font: inherit;
+}
+
+.devsecops-controls select {
+  width: 100%;
+  padding: 0 12px;
+}
+
+.devsecops-controls button,
+.status-options button {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.devsecops-controls button:first-of-type,
+.status-options button.active {
+  border-color: #19d08f;
+  background: #19d08f;
+  color: #061122;
+}
+
+.devsecops-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.42fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.security-checklist {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.security-item {
+  min-height: 238px;
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  padding: 20px;
+}
+
+.security-item div:first-child {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+}
+
+.security-item span {
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(154, 221, 255, 0.12);
+  color: #9addff;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.security-item small {
+  color: #d8dbe8;
+  font-weight: 700;
+}
+
+.security-item h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 1.18rem;
+}
+
+.security-item p,
+.security-report p,
+.security-report li {
+  margin: 0;
+  color: #d8dbe8;
+  line-height: 1.6;
+}
+
+.status-options {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.status-options button {
+  min-width: 0;
+  padding: 0 8px;
+  font-size: 0.86rem;
+}
+
+.security-report {
+  position: sticky;
+  top: 24px;
+  display: grid;
+  gap: 18px;
+  padding: 22px;
+}
+
+.security-report h2,
+.security-report h3 {
+  margin: 0;
+  color: #ffffff;
+}
+
+.security-report ul {
+  margin: 10px 0 0;
+  padding-left: 20px;
+}
+
+.report-box {
+  display: grid;
+  gap: 6px;
+  padding: 16px;
+  border: 1px solid rgba(25, 208, 143, 0.24);
+  border-radius: 8px;
+  background: rgba(2, 8, 25, 0.72);
+}
+
+.report-box strong {
+  color: #19d08f;
+  font-size: 1.12rem;
+}
+
+.impact-alto {
+  color: #ff8f8f;
+}
+
+.impact-médio {
+  color: #f5b400;
+}
+
+.impact-baixo {
+  color: #19d08f;
+}
+
 .contact-view {
   min-height: 45vh;
   display: flex;
@@ -1508,7 +1740,11 @@ a {
   .finance-grid,
   .finance-table div,
   .shop-layout,
-  .product-grid {
+  .product-grid,
+  .devsecops-controls,
+  .devsecops-layout,
+  .security-checklist,
+  .status-options {
     grid-template-columns: 1fr;
   }
 
@@ -1531,6 +1767,15 @@ a {
   }
 
   .cart-panel {
+    position: static;
+  }
+
+  .readiness-panel div:first-child {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .security-report {
     position: static;
   }
 

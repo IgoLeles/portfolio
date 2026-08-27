@@ -58,6 +58,14 @@ const projects = [
   },
   {
     level: 'Avançado',
+    title: 'Checklist DevSecOps para Deploy',
+    description: 'Simulador defensivo para revisar secrets, dependências, permissões, logs e dados públicos antes da publicação.',
+    stack: 'React, TypeScript, DevSecOps',
+    href: '/projetos/devsecops-checklist',
+    cta: 'Testar checklist',
+  },
+  {
+    level: 'Avançado',
     title: 'Dashboard Financeiro',
     description: 'Painel com cards, filtros e gráficos para acompanhar entradas, saídas e saldo mensal.',
     stack: 'React, TypeScript, Charts',

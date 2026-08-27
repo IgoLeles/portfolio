@@ -9,6 +9,7 @@ import ProjetoBalf360 from './pages/ProjetoBalf360';
 import ProjetoBuscadorCep from './pages/ProjetoBuscadorCep';
 import ProjetoCalculadora from './pages/ProjetoCalculadora';
 import ProjetoDashboardFinanceiro from './pages/ProjetoDashboardFinanceiro';
+import ProjetoDevSecOpsChecklist from './pages/ProjetoDevSecOpsChecklist';
 import ProjetoListaTarefas from './pages/ProjetoListaTarefas';
 import ProjetoMiniEcommerce from './pages/ProjetoMiniEcommerce';
 import ProjetoSalesforcePortfolioApp from './pages/ProjetoSalesforcePortfolioApp';
@@ -30,6 +31,7 @@ export default function App() {
             <Route path="/projetos/buscador-de-cep" element={<ProjetoBuscadorCep />} />
             <Route path="/projetos/calculadora" element={<ProjetoCalculadora />} />
             <Route path="/projetos/dashboard-financeiro" element={<ProjetoDashboardFinanceiro />} />
+            <Route path="/projetos/devsecops-checklist" element={<ProjetoDevSecOpsChecklist />} />
             <Route path="/projetos/lista-de-tarefas" element={<ProjetoListaTarefas />} />
             <Route path="/projetos/mini-ecommerce" element={<ProjetoMiniEcommerce />} />
             <Route path="/projetos/salesforce-portfolio-app" element={<ProjetoSalesforcePortfolioApp />} />
