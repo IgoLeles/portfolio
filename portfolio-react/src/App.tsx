@@ -12,6 +12,7 @@ import ProjetoDashboardFinanceiro from './pages/ProjetoDashboardFinanceiro';
 import ProjetoDevSecOpsChecklist from './pages/ProjetoDevSecOpsChecklist';
 import ProjetoListaTarefas from './pages/ProjetoListaTarefas';
 import ProjetoMiniEcommerce from './pages/ProjetoMiniEcommerce';
+import ProjetoPoliticaSenhas from './pages/ProjetoPoliticaSenhas';
 import ProjetoSalesforcePortfolioApp from './pages/ProjetoSalesforcePortfolioApp';
 import ProjetoSalvadorAbas from './pages/ProjetoSalvadorAbas';
 import Contato from './pages/Contato';
@@ -34,6 +35,7 @@ export default function App() {
             <Route path="/projetos/devsecops-checklist" element={<ProjetoDevSecOpsChecklist />} />
             <Route path="/projetos/lista-de-tarefas" element={<ProjetoListaTarefas />} />
             <Route path="/projetos/mini-ecommerce" element={<ProjetoMiniEcommerce />} />
+            <Route path="/projetos/politica-de-senhas" element={<ProjetoPoliticaSenhas />} />
             <Route path="/projetos/salesforce-portfolio-app" element={<ProjetoSalesforcePortfolioApp />} />
             <Route path="/projetos/salvador-de-abas" element={<ProjetoSalvadorAbas />} />
             <Route path="/contato" element={<Contato />} />

@@ -65,6 +65,14 @@ const projects = [
     cta: 'Testar checklist',
   },
   {
+    level: 'Intermediário',
+    title: 'Gerador de Política de Senhas',
+    description: 'Ferramenta educativa para criar diretrizes de senha, MFA e resposta a credenciais vazadas sem coletar dados reais.',
+    stack: 'React, TypeScript, Segurança',
+    href: '/projetos/politica-de-senhas',
+    cta: 'Gerar política',
+  },
+  {
     level: 'Avançado',
     title: 'Dashboard Financeiro',
     description: 'Painel com cards, filtros e gráficos para acompanhar entradas, saídas e saldo mensal.',
