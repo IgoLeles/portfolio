@@ -2050,6 +2050,255 @@ a {
   color: #061122;
 }
 
+.security-headers-page .case-hero h1 {
+  color: #9addff;
+}
+
+.security-headers-page .case-summary div,
+.security-headers-page .case-panel {
+  border-color: rgba(154, 221, 255, 0.3);
+}
+
+.headers-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(340px, 0.46fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.headers-builder,
+.headers-report,
+.headers-config-panel {
+  border: 1px solid rgba(154, 221, 255, 0.3);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.headers-builder {
+  display: grid;
+  gap: 16px;
+  padding: 22px;
+}
+
+.headers-scenarios {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.headers-scenarios button,
+.headers-list button,
+.headers-actions button {
+  border: 1px solid rgba(154, 221, 255, 0.3);
+  border-radius: 8px;
+  background: #020819;
+  color: #ffffff;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.headers-scenarios button {
+  min-height: 46px;
+  padding: 0 12px;
+}
+
+.headers-scenarios button.active,
+.headers-list button.active {
+  border-color: #9addff;
+  background: rgba(154, 221, 255, 0.13);
+}
+
+.headers-scenario-card {
+  padding: 18px;
+  border: 1px solid rgba(245, 180, 0, 0.22);
+  border-radius: 8px;
+  background: rgba(2, 8, 25, 0.68);
+}
+
+.headers-scenario-card span {
+  display: inline-flex;
+  margin-bottom: 10px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(245, 180, 0, 0.16);
+  color: #f5b400;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.headers-scenario-card strong {
+  display: block;
+  color: #ffffff;
+  font-size: 1.22rem;
+}
+
+.headers-scenario-card p {
+  margin: 10px 0 0;
+  color: #d8dbe8;
+  line-height: 1.6;
+}
+
+.headers-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.headers-list button {
+  min-height: 168px;
+  display: grid;
+  gap: 9px;
+  align-content: start;
+  padding: 18px;
+  text-align: left;
+}
+
+.headers-list button span {
+  width: fit-content;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(154, 221, 255, 0.12);
+  color: #9addff;
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.headers-list button strong {
+  color: #ffffff;
+  overflow-wrap: anywhere;
+}
+
+.headers-list button small {
+  color: #d8dbe8;
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+
+.headers-report {
+  position: sticky;
+  top: 24px;
+  display: grid;
+  gap: 16px;
+  padding: 22px;
+}
+
+.headers-grade,
+.headers-gaps li {
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  background: rgba(2, 8, 25, 0.72);
+}
+
+.headers-grade span,
+.headers-config-panel span,
+.headers-gaps li span {
+  color: #9299ad;
+}
+
+.headers-grade strong {
+  display: block;
+  margin: 8px 0;
+  font-size: 2rem;
+}
+
+.headers-grade p,
+.headers-gaps p,
+.headers-gaps li span {
+  margin: 0;
+  color: #d8dbe8;
+  line-height: 1.6;
+}
+
+.headers-strong strong {
+  color: #19d08f;
+}
+
+.headers-evolving strong {
+  color: #9addff;
+}
+
+.headers-warning strong {
+  color: #f5b400;
+}
+
+.headers-fragile strong {
+  color: #ff8f8f;
+}
+
+.headers-score-track {
+  height: 14px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.headers-score-track span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #ff6b6b, #f5b400, #9addff, #19d08f);
+}
+
+.headers-actions button {
+  width: 100%;
+  min-height: 44px;
+  border-color: #19d08f;
+  background: #19d08f;
+  color: #061122;
+}
+
+.headers-gaps h2 {
+  margin: 0 0 12px;
+  color: #ffffff;
+  font-size: 1.24rem;
+}
+
+.headers-gaps ul {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+  list-style: none;
+}
+
+.headers-gaps li strong {
+  display: block;
+  margin-bottom: 6px;
+  color: #ffffff;
+}
+
+.headers-config-panel {
+  display: grid;
+  gap: 16px;
+  margin-top: 18px;
+  padding: 22px;
+}
+
+.headers-config-panel div {
+  display: grid;
+  gap: 6px;
+}
+
+.headers-config-panel strong {
+  color: #ffffff;
+  font-size: 1.35rem;
+}
+
+.headers-config-panel pre {
+  margin: 0;
+  min-height: 148px;
+  overflow: auto;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  background: rgba(2, 8, 25, 0.76);
+  color: #d8dbe8;
+  font: 0.95rem/1.65 Consolas, Monaco, 'Courier New', monospace;
+  white-space: pre-wrap;
+}
+
 .contact-view {
   min-height: 45vh;
   display: flex;
@@ -2166,7 +2415,10 @@ a {
   .risk-shell,
   .risk-filter-bar,
   .risk-sliders,
-  .risk-score-comparison {
+  .risk-score-comparison,
+  .headers-shell,
+  .headers-scenarios,
+  .headers-list {
     grid-template-columns: 1fr;
   }
 
@@ -2206,6 +2458,10 @@ a {
   }
 
   .risk-report {
+    position: static;
+  }
+
+  .headers-report {
     position: static;
   }
 

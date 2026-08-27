@@ -82,6 +82,14 @@ const projects = [
   },
   {
     level: 'Avançado',
+    title: 'Security Headers Analyzer',
+    description: 'Simulador guiado para revisar cabeçalhos HTTP de segurança sem consultar sites reais ou depender de CORS.',
+    stack: 'React, TypeScript, AppSec',
+    href: '/projetos/security-headers',
+    cta: 'Analisar cenário',
+  },
+  {
+    level: 'Avançado',
     title: 'Dashboard Financeiro',
     description: 'Painel com cards, filtros e gráficos para acompanhar entradas, saídas e saldo mensal.',
     stack: 'React, TypeScript, Charts',
