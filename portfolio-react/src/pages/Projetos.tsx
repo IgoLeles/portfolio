@@ -74,6 +74,14 @@ const projects = [
   },
   {
     level: 'Avançado',
+    title: 'Simulador de Classificação de Risco',
+    description: 'Ferramenta defensiva para classificar ativos fictícios por impacto, probabilidade e controles recomendados.',
+    stack: 'React, TypeScript, Gestão de Risco',
+    href: '/projetos/classificacao-de-risco',
+    cta: 'Simular risco',
+  },
+  {
+    level: 'Avançado',
     title: 'Dashboard Financeiro',
     description: 'Painel com cards, filtros e gráficos para acompanhar entradas, saídas e saldo mensal.',
     stack: 'React, TypeScript, Charts',
