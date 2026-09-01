@@ -48,9 +48,11 @@ a {
 }
 
 .logo {
-  width: 92px;
+  width: 118px;
+  max-height: 78px;
   height: auto;
   display: block;
+  object-fit: contain;
 }
 
 .main-nav {
@@ -105,7 +107,7 @@ a {
 .hero-image {
   width: 100%;
   display: block;
-  aspect-ratio: 3 / 1;
+  aspect-ratio: 1983 / 793;
   object-fit: contain;
   object-position: center;
 }
@@ -2356,7 +2358,8 @@ a {
   }
 
   .logo {
-    width: 84px;
+    width: 104px;
+    max-height: 70px;
   }
 
   .main-nav {
