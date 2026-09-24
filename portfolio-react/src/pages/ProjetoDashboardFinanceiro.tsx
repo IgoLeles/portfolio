@@ -123,6 +123,9 @@ export default function ProjetoDashboardFinanceiro() {
             <span>Indicadores</span>
             <span>Charts em CSS</span>
           </div>
+          <div className="case-actions">
+            <Link to="/projetos/qa-dashboard-financeiro">Ver case de QA de dados</Link>
+          </div>
         </div>
 
         <aside className="case-summary">
@@ -187,7 +190,11 @@ export default function ProjetoDashboardFinanceiro() {
             <div className="bar-chart" aria-label="Gráfico de entradas e saídas por mês">
               {monthlyChart.map((item) => (
                 <div className="bar-group" key={item.month}>
-                  <div className="bars">
+                  <div
+                    className="bars"
+                    role="img"
+                    aria-label={`${item.month}: entradas ${currency.format(item.income)} e saídas ${currency.format(item.expenses)}`}
+                  >
                     <span className="bar-income" style={{ height: item.incomeHeight }} title={`Entradas: ${currency.format(item.income)}`} />
                     <span className="bar-expense" style={{ height: item.expensesHeight }} title={`Saídas: ${currency.format(item.expenses)}`} />
                   </div>
@@ -205,7 +212,11 @@ export default function ProjetoDashboardFinanceiro() {
             <h2>Distribuição por categoria</h2>
             <div className="category-bars">
               {categoryChart.map((item) => (
-                <div key={item.category}>
+                <div
+                  key={item.category}
+                  role="img"
+                  aria-label={`${item.category}: ${currency.format(item.total)}`}
+                >
                   <span>{item.category}</span>
                   <div>
                     <strong style={{ width: item.width }} />
@@ -213,6 +224,9 @@ export default function ProjetoDashboardFinanceiro() {
                   <small>{currency.format(item.total)}</small>
                 </div>
               ))}
+              {categoryChart.length === 0 && (
+                <p className="finance-empty">Nenhuma categoria possui movimentações para os filtros selecionados.</p>
+              )}
             </div>
           </article>
         </div>
@@ -230,6 +244,9 @@ export default function ProjetoDashboardFinanceiro() {
                 </small>
               </div>
             ))}
+            {filteredTransactions.length === 0 && (
+              <p className="finance-empty">Nenhuma movimentação encontrada para os filtros selecionados.</p>
+            )}
           </div>
         </article>
       </div>

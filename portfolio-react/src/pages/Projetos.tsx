@@ -114,6 +114,14 @@ const projects = [
   },
   {
     level: 'Avançado',
+    title: 'QA do Dashboard Financeiro',
+    description: 'Case de qualidade de dados com reconciliação entre KPIs, filtros, gráficos e movimentações detalhadas.',
+    stack: 'QA de Dados, Vitest, Reconciliação',
+    href: '/projetos/qa-dashboard-financeiro',
+    cta: 'Ver case de QA',
+  },
+  {
+    level: 'Avançado',
     title: 'Mini E-commerce',
     description: 'Catálogo, busca, carrinho e resumo de compra para demonstrar fluxo completo de interface.',
     stack: 'React, TypeScript, Estado Global',

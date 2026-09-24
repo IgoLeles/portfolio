@@ -10,6 +10,7 @@ import ProjetoBuscadorCep from './pages/ProjetoBuscadorCep';
 import ProjetoQaBuscadorCep from './pages/ProjetoQaBuscadorCep';
 import ProjetoCalculadora from './pages/ProjetoCalculadora';
 import ProjetoDashboardFinanceiro from './pages/ProjetoDashboardFinanceiro';
+import ProjetoQaDashboardFinanceiro from './pages/ProjetoQaDashboardFinanceiro';
 import ProjetoDevSecOpsChecklist from './pages/ProjetoDevSecOpsChecklist';
 import ProjetoListaTarefas from './pages/ProjetoListaTarefas';
 import ProjetoQaListaTarefas from './pages/ProjetoQaListaTarefas';
@@ -38,6 +39,7 @@ export default function App() {
             <Route path="/projetos/qa-buscador-de-cep" element={<ProjetoQaBuscadorCep />} />
             <Route path="/projetos/calculadora" element={<ProjetoCalculadora />} />
             <Route path="/projetos/dashboard-financeiro" element={<ProjetoDashboardFinanceiro />} />
+            <Route path="/projetos/qa-dashboard-financeiro" element={<ProjetoQaDashboardFinanceiro />} />
             <Route path="/projetos/devsecops-checklist" element={<ProjetoDevSecOpsChecklist />} />
             <Route path="/projetos/lista-de-tarefas" element={<ProjetoListaTarefas />} />
             <Route path="/projetos/qa-lista-de-tarefas" element={<ProjetoQaListaTarefas />} />
