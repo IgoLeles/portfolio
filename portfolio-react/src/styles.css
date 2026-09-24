@@ -2604,6 +2604,125 @@ a {
   border-left: 3px solid #f5b400;
 }
 
+.qa-api-flow-panel,
+.qa-contract-panel,
+.qa-api-example {
+  margin-bottom: 18px;
+}
+
+.qa-api-flow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: 10px;
+}
+
+.qa-api-flow > div {
+  min-height: 128px;
+  padding: 18px;
+  border: 1px solid rgba(52, 211, 153, 0.25);
+  border-radius: 8px;
+  background: rgba(52, 211, 153, 0.045);
+}
+
+.qa-api-flow > div span,
+.qa-api-flow > div strong,
+.qa-api-flow > div small {
+  display: block;
+}
+
+.qa-api-flow > div span {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  margin-bottom: 16px;
+  place-items: center;
+  border-radius: 50%;
+  background: #34d399;
+  color: #03140e;
+  font-size: 0.8rem;
+  font-weight: 900;
+}
+
+.qa-api-flow > div strong {
+  color: #ffffff;
+  line-height: 1.35;
+}
+
+.qa-api-flow > div small {
+  margin-top: 6px;
+  color: #9da5b4;
+}
+
+.qa-api-flow > b {
+  color: #f5b400;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.qa-contract-table {
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.qa-contract-table > div {
+  display: grid;
+  grid-template-columns: 0.8fr 0.7fr 0.8fr 2fr;
+  gap: 16px;
+  align-items: center;
+  min-height: 52px;
+  padding: 10px 16px;
+}
+
+.qa-contract-table > div + div {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.qa-contract-table .qa-table-head {
+  min-height: 44px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #b9c0cf;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.qa-contract-table code {
+  color: #6ee7b7;
+  font-family: "Consolas", "Courier New", monospace;
+  font-weight: 700;
+}
+
+.qa-contract-table span {
+  color: #d8dbe8;
+  line-height: 1.45;
+}
+
+.qa-api-example {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.85fr) minmax(320px, 1.15fr);
+  gap: 24px;
+  align-items: center;
+}
+
+.qa-api-example pre {
+  max-width: 100%;
+  overflow: auto;
+  margin: 0;
+  padding: 20px;
+  border: 1px solid rgba(52, 211, 153, 0.24);
+  border-radius: 8px;
+  background: #050b18;
+  color: #a7f3d0;
+  font: 0.9rem/1.65 "Consolas", "Courier New", monospace;
+}
+
+.qa-api-request {
+  margin-bottom: 6px !important;
+  color: #cbd5e1 !important;
+}
+
 .site-footer {
   padding: 18px;
   background: #020819;
@@ -2689,7 +2808,10 @@ a {
   .qa-overview-grid,
   .qa-test-list,
   .qa-defect-grid,
-  .qa-risk-table > div {
+  .qa-risk-table > div,
+  .qa-contract-table > div,
+  .qa-api-example,
+  .qa-api-flow {
     grid-template-columns: 1fr;
   }
 
@@ -2706,9 +2828,22 @@ a {
     display: none;
   }
 
+  .qa-contract-table .qa-table-head {
+    display: none;
+  }
+
   .qa-risk-table > div {
     gap: 8px;
     padding: 16px;
+  }
+
+  .qa-contract-table > div {
+    gap: 6px;
+    padding: 14px 16px;
+  }
+
+  .qa-api-flow > b {
+    display: none;
   }
 
   .qa-filter {

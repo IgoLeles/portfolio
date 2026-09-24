@@ -172,6 +172,9 @@ export default function ProjetoBuscadorCep() {
             <span>OpenStreetMap</span>
             <span>Estados de UI</span>
           </div>
+          <div className="case-actions">
+            <Link to="/projetos/qa-buscador-de-cep">Ver case de QA</Link>
+          </div>
         </div>
 
         <aside className="case-summary">

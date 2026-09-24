@@ -57,6 +57,14 @@ const projects = [
     cta: 'Testar projeto',
   },
   {
+    level: 'Intermediário',
+    title: 'QA de API - Buscador de CEP',
+    description: 'Case de testes de API e interface cobrindo contrato, respostas válidas, erros, indisponibilidade e integração com mapa.',
+    stack: 'QA de API, Vitest, Mock de Serviços',
+    href: '/projetos/qa-buscador-de-cep',
+    cta: 'Ver case de QA',
+  },
+  {
     level: 'Avançado',
     title: 'Salesforce Portfolio App',
     description: 'Case de portfólio dentro da Salesforce, com objetos customizados, relatórios, dashboard e publicação via Experience Cloud.',

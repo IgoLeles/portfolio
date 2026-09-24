@@ -7,6 +7,7 @@ import Projetos from './pages/Projetos';
 import ProjetoOsfAcademy from './pages/ProjetoOsfAcademy';
 import ProjetoBalf360 from './pages/ProjetoBalf360';
 import ProjetoBuscadorCep from './pages/ProjetoBuscadorCep';
+import ProjetoQaBuscadorCep from './pages/ProjetoQaBuscadorCep';
 import ProjetoCalculadora from './pages/ProjetoCalculadora';
 import ProjetoDashboardFinanceiro from './pages/ProjetoDashboardFinanceiro';
 import ProjetoDevSecOpsChecklist from './pages/ProjetoDevSecOpsChecklist';
@@ -33,6 +34,7 @@ export default function App() {
             <Route path="/projetos/osf-academy" element={<ProjetoOsfAcademy />} />
             <Route path="/projetos/balf360" element={<ProjetoBalf360 />} />
             <Route path="/projetos/buscador-de-cep" element={<ProjetoBuscadorCep />} />
+            <Route path="/projetos/qa-buscador-de-cep" element={<ProjetoQaBuscadorCep />} />
             <Route path="/projetos/calculadora" element={<ProjetoCalculadora />} />
             <Route path="/projetos/dashboard-financeiro" element={<ProjetoDashboardFinanceiro />} />
             <Route path="/projetos/devsecops-checklist" element={<ProjetoDevSecOpsChecklist />} />
