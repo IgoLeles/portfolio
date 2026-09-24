@@ -120,6 +120,14 @@ const projects = [
     href: '/projetos/mini-ecommerce',
     cta: 'Testar loja',
   },
+  {
+    level: 'Avançado',
+    title: 'QA E2E - Mini E-commerce',
+    description: 'Automação em navegador real cobrindo catálogo, busca, filtros, carrinho, desconto e finalização simulada.',
+    stack: 'Playwright, E2E, Regras de Negócio',
+    href: '/projetos/qa-mini-ecommerce',
+    cta: 'Ver case de QA',
+  },
 ];
 
 export default function Projetos() {

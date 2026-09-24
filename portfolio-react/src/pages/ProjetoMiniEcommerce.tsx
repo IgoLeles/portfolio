@@ -69,6 +69,7 @@ export default function ProjetoMiniEcommerce() {
   const [search, setSearch] = useState('');
   const [category, setCategory] = useState('Todas');
   const [cart, setCart] = useState<CartItem[]>([]);
+  const [checkoutMessage, setCheckoutMessage] = useState('');
 
   const filteredProducts = useMemo(() => {
     const normalizedSearch = search.trim().toLowerCase();
@@ -93,6 +94,7 @@ export default function ProjetoMiniEcommerce() {
   }, [cart]);
 
   function addToCart(product: Product) {
+    setCheckoutMessage('');
     setCart((currentCart) => {
       const existingItem = currentCart.find((item) => item.id === product.id);
 
@@ -107,6 +109,7 @@ export default function ProjetoMiniEcommerce() {
   }
 
   function updateQuantity(productId: number, quantity: number) {
+    setCheckoutMessage('');
     if (quantity <= 0) {
       setCart((currentCart) => currentCart.filter((item) => item.id !== productId));
       return;
@@ -139,6 +142,9 @@ export default function ProjetoMiniEcommerce() {
             <span>Catálogo</span>
             <span>Carrinho</span>
             <span>UX</span>
+          </div>
+          <div className="case-actions">
+            <Link to="/projetos/qa-mini-ecommerce">Ver case de QA E2E</Link>
           </div>
         </div>
 
@@ -214,9 +220,21 @@ export default function ProjetoMiniEcommerce() {
                   <strong>{item.name}</strong>
                   <span>{currency.format(item.price)}</span>
                   <div>
-                    <button type="button" onClick={() => updateQuantity(item.id, item.quantity - 1)}>-</button>
+                    <button
+                      type="button"
+                      aria-label={`Diminuir quantidade de ${item.name}`}
+                      onClick={() => updateQuantity(item.id, item.quantity - 1)}
+                    >
+                      -
+                    </button>
                     <small>{item.quantity}</small>
-                    <button type="button" onClick={() => updateQuantity(item.id, item.quantity + 1)}>+</button>
+                    <button
+                      type="button"
+                      aria-label={`Aumentar quantidade de ${item.name}`}
+                      onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                    >
+                      +
+                    </button>
                   </div>
                 </div>
               ))
@@ -238,9 +256,17 @@ export default function ProjetoMiniEcommerce() {
             </div>
           </div>
 
-          <button type="button" className="checkout-button" disabled={cart.length === 0}>
+          <button
+            type="button"
+            className="checkout-button"
+            disabled={cart.length === 0}
+            onClick={() => setCheckoutMessage(`Simulação concluída com ${cartSummary.items} item(ns) e total de ${currency.format(cartSummary.total)}.`)}
+          >
             Finalizar simulação
           </button>
+          {checkoutMessage && (
+            <p className="checkout-message" role="status">{checkoutMessage}</p>
+          )}
         </aside>
       </div>
 

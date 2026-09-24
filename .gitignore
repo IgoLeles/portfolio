@@ -1,5 +1,7 @@
 node_modules/
 dist/
 *.tsbuildinfo
+portfolio-react/test-results/
+portfolio-react/playwright-report/
 .env
 .env.local

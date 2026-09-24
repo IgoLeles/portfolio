@@ -1411,6 +1411,17 @@ a {
   opacity: 0.58;
 }
 
+.checkout-message {
+  margin: 12px 0 0;
+  padding: 12px;
+  border: 1px solid rgba(52, 211, 153, 0.32);
+  border-radius: 8px;
+  background: rgba(52, 211, 153, 0.08);
+  color: #a7f3d0;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
 .devsecops-page .case-hero h1 {
   color: #9addff;
 }
@@ -2583,6 +2594,11 @@ a {
   color: #6ee7b7;
 }
 
+.qa-status-automatizado {
+  background: rgba(52, 211, 153, 0.14);
+  color: #6ee7b7;
+}
+
 .qa-status-planejado {
   background: rgba(96, 165, 250, 0.14);
   color: #93c5fd;
@@ -2723,6 +2739,88 @@ a {
   color: #cbd5e1 !important;
 }
 
+.qa-e2e-flow-panel,
+.qa-business-panel {
+  margin-bottom: 18px;
+}
+
+.qa-e2e-flow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+}
+
+.qa-e2e-flow > div {
+  min-height: 124px;
+  padding: 18px;
+  border: 1px solid rgba(96, 165, 250, 0.26);
+  border-radius: 8px;
+  background: rgba(96, 165, 250, 0.05);
+}
+
+.qa-e2e-flow span,
+.qa-e2e-flow strong,
+.qa-e2e-flow small {
+  display: block;
+}
+
+.qa-e2e-flow span {
+  margin-bottom: 18px;
+  color: #60a5fa;
+  font: 800 0.8rem/1 "Consolas", "Courier New", monospace;
+}
+
+.qa-e2e-flow strong {
+  color: #ffffff;
+}
+
+.qa-e2e-flow small {
+  margin-top: 7px;
+  color: #9da5b4;
+}
+
+.qa-e2e-flow > b {
+  color: #60a5fa;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.qa-calculation {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.qa-calculation > div {
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  background: rgba(2, 8, 25, 0.52);
+}
+
+.qa-calculation span,
+.qa-calculation strong,
+.qa-calculation small {
+  display: block;
+}
+
+.qa-calculation span {
+  color: #b9c0cf;
+  font-size: 0.86rem;
+}
+
+.qa-calculation strong {
+  margin: 10px 0 5px;
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+.qa-calculation small {
+  color: #6ee7b7;
+  font-weight: 700;
+}
+
 .site-footer {
   padding: 18px;
   background: #020819;
@@ -2811,7 +2909,9 @@ a {
   .qa-risk-table > div,
   .qa-contract-table > div,
   .qa-api-example,
-  .qa-api-flow {
+  .qa-api-flow,
+  .qa-e2e-flow,
+  .qa-calculation {
     grid-template-columns: 1fr;
   }
 
@@ -2843,6 +2943,10 @@ a {
   }
 
   .qa-api-flow > b {
+    display: none;
+  }
+
+  .qa-e2e-flow > b {
     display: none;
   }
 
