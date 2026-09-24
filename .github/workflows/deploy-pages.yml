@@ -1,38 +1,86 @@
-name: Deploy GitHub Pages
+name: Quality Gate and Deploy
 
 on:
   push:
+    branches:
+      - main
+  pull_request:
     branches:
       - main
   workflow_dispatch:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
-  group: pages
+  group: portfolio-${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  quality:
+    name: Audit, test and build
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: portfolio-react
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
+      - name: Configure Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: portfolio-react/package-lock.json
 
-      - name: Upload artifact
+      - name: Install locked dependencies
+        run: npm ci
+
+      - name: Audit dependencies
+        run: npm audit --audit-level=moderate
+
+      - name: Run component and integration tests
+        run: npm test
+
+      - name: Install Playwright browser
+        run: npx playwright install --with-deps chromium
+
+      - name: Run end-to-end tests
+        run: npm run test:e2e
+
+      - name: Build production site
+        run: npm run build
+
+      - name: Preserve Playwright diagnostics on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-diagnostics-${{ github.run_id }}
+          path: |
+            portfolio-react/test-results
+            portfolio-react/playwright-report
+          if-no-files-found: ignore
+          retention-days: 7
+
+      - name: Upload compiled site
+        if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: portfolio-react/dist
 
-      - name: Deploy
+  deploy:
+    name: Deploy approved build
+    if: github.event_name != 'pull_request'
+    needs: quality
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy compiled site
         id: deployment
         uses: actions/deploy-pages@v4
