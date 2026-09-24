@@ -42,6 +42,14 @@ const projects = [
   },
   {
     level: 'Intermediário',
+    title: 'QA da Lista de Tarefas',
+    description: 'Case de qualidade com estratégia de testes, matriz de riscos, cenários funcionais, relatório de defeitos e automação.',
+    stack: 'QA, Vitest, Testing Library',
+    href: '/projetos/qa-lista-de-tarefas',
+    cta: 'Ver case de QA',
+  },
+  {
+    level: 'Intermediário',
     title: 'Buscador de CEP',
     description: 'Consulta de endereço por CEP, exibindo estados de carregamento, erro e resultado.',
     stack: 'React, TypeScript, API',

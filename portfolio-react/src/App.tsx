@@ -11,6 +11,7 @@ import ProjetoCalculadora from './pages/ProjetoCalculadora';
 import ProjetoDashboardFinanceiro from './pages/ProjetoDashboardFinanceiro';
 import ProjetoDevSecOpsChecklist from './pages/ProjetoDevSecOpsChecklist';
 import ProjetoListaTarefas from './pages/ProjetoListaTarefas';
+import ProjetoQaListaTarefas from './pages/ProjetoQaListaTarefas';
 import ProjetoMiniEcommerce from './pages/ProjetoMiniEcommerce';
 import ProjetoPoliticaSenhas from './pages/ProjetoPoliticaSenhas';
 import ProjetoClassificacaoRisco from './pages/ProjetoClassificacaoRisco';
@@ -36,6 +37,7 @@ export default function App() {
             <Route path="/projetos/dashboard-financeiro" element={<ProjetoDashboardFinanceiro />} />
             <Route path="/projetos/devsecops-checklist" element={<ProjetoDevSecOpsChecklist />} />
             <Route path="/projetos/lista-de-tarefas" element={<ProjetoListaTarefas />} />
+            <Route path="/projetos/qa-lista-de-tarefas" element={<ProjetoQaListaTarefas />} />
             <Route path="/projetos/mini-ecommerce" element={<ProjetoMiniEcommerce />} />
             <Route path="/projetos/politica-de-senhas" element={<ProjetoPoliticaSenhas />} />
             <Route path="/projetos/classificacao-de-risco" element={<ProjetoClassificacaoRisco />} />

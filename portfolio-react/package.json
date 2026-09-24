@@ -4,7 +4,8 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "build:pages": "npm run build && node scripts/copy-build-to-pages.mjs",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "vitest run"
   },
   "dependencies": {
     "@vitejs/plugin-react": "latest",
@@ -16,7 +17,12 @@
     "vite": "latest"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.6.7",
     "@types/react": "^19.2.18",
-    "@types/react-dom": "^19.2.4"
+    "@types/react-dom": "^19.2.4",
+    "jsdom": "^29.1.1",
+    "vitest": "^4.1.11"
   }
 }

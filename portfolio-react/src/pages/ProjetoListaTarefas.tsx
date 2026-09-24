@@ -139,6 +139,7 @@ export default function ProjetoListaTarefas() {
             <a href={shareUrl} target="_blank" rel="noreferrer">
               Compartilhar resumo
             </a>
+            <Link to="/projetos/qa-lista-de-tarefas">Ver case de QA</Link>
           </div>
           <p className="integration-note">
             O botão usa um link de compartilhamento do WhatsApp para abrir o app ou
