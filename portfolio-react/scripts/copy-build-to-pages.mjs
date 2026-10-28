@@ -13,7 +13,7 @@ const files = [
   ['img/hero-home.png', 'img/hero-home.png'],
   ['img/igo-profile-office.png', 'img/igo-profile-office.png'],
   ['img/igo-brand-signature.png', 'img/igo-brand-signature.png'],
-  ['img/igo-profile-real.jpg', 'img/igo-profile-real.jpg'],
+  ['img/igo-profile-real.png', 'img/igo-profile-real.png'],
   ['img/igo-brand-banner-v2.png', 'img/igo-brand-banner-v2.png'],
   ['img/igo-brand-mark-v2.png', 'img/igo-brand-mark-v2.png'],
   ['img/osf-academy-concept.png', 'img/osf-academy-concept.png'],

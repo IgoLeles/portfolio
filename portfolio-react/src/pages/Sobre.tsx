@@ -71,7 +71,7 @@ export default function Sobre() {
       <div className="about-view">
         <div className="about-photo-frame">
           <img
-            src={`${assetBase}img/igo-profile-real.jpg`}
+            src={`${assetBase}img/igo-profile-real.png`}
             alt="Igo Quaresma em retrato pessoal"
             className="about-photo"
           />
