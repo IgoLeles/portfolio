@@ -9,6 +9,7 @@ const distDir = resolve(appDir, 'dist');
 
 const files = [
   ['index.html', 'index.html'],
+  ['curriculo.html', 'curriculo.html'],
   ['assets', 'assets'],
   ['img/hero-home.png', 'img/hero-home.png'],
   ['img/igo-profile-office.png', 'img/igo-profile-office.png'],

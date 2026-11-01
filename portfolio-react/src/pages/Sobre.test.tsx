@@ -15,9 +15,14 @@ describe('Página Sobre', () => {
       name: 'Certificações, certificados e formações',
     });
 
-    expect(within(directory).getByText('50')).toBeInTheDocument();
+    expect(within(directory).getByText('55')).toBeInTheDocument();
     expect(within(screen.getByText('Áreas').parentElement as HTMLElement).getByText('7')).toBeInTheDocument();
-    expect(within(directory).getByText('50 resultados encontrados')).toBeInTheDocument();
+    expect(within(directory).getByText('55 resultados encontrados')).toBeInTheDocument();
+    expect(within(directory).getByText('ID 087119', { exact: false })).toBeInTheDocument();
+    expect(screen.getByText('AGO 2024 — JUN 2026')).toBeInTheDocument();
+    expect(
+      screen.getByRole('link', { name: 'Currículo completo' }).getAttribute('href'),
+    ).toMatch(/\/curriculo\.html$/);
   });
 
   it('filtra credenciais por área e busca sem depender de acentuação', async () => {
@@ -32,7 +37,7 @@ describe('Página Sobre', () => {
       'Dados, BI e inteligência artificial',
     );
 
-    expect(within(directory).getByText('8 resultados encontrados')).toBeInTheDocument();
+    expect(within(directory).getByText('9 resultados encontrados')).toBeInTheDocument();
     expect(within(directory).getByText('Big Data Fundamentos 2.0 - Data Science Academy')).toBeInTheDocument();
     expect(within(directory).queryByText('Copado Certified Copado AI')).not.toBeInTheDocument();
 

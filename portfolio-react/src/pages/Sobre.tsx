@@ -16,12 +16,13 @@ const skills = [
 ];
 
 const credentialHighlights = [
-  'Agentblazer Champion 2026',
+  'Copado Certified Copado Data 360',
+  'Copado Certified Agentia Advanced',
   'Copado Certified Copado AI',
   'Flosum Certified Expert',
-  'Salesforce Developer Core - OSF Digital',
-  'BALF360 - Operação Vértice',
-  'Certified Online Fraud Prevention Specialist (COFPS)',
+  'OSF Academy - Salesforce Developer Core',
+  'Formação Salesforce BALF360 - Operação Vértice',
+  'Agentblazer Champion 2026',
 ];
 
 const links = [
@@ -29,6 +30,40 @@ const links = [
   { label: 'Trailblazer', href: 'https://salesforce.com/trailblazer/igoquaresma' },
   { label: 'Credly', href: 'https://credly.com/users/ilq' },
   { label: 'IDCiber', href: 'https://idciber.org/' },
+];
+
+const professionalHistory = [
+  {
+    period: 'AGO 2024 — JUN 2026',
+    role: 'Desenvolvedor Full Stack',
+    company: 'Solutic Group · Remoto',
+    summary: 'Aplicações Angular e Node.js, autenticação JWT, integrações, AWS, testes e apoio técnico às decisões de arquitetura.',
+  },
+  {
+    period: 'MAI 2023 — MAI 2024',
+    role: 'Desenvolvedor Web / Cloud Support',
+    company: 'Plushie Guardians · Web3 · Remoto',
+    summary: 'Infraestrutura AWS, políticas de segurança, integrações e suporte técnico a equipes internacionais.',
+  },
+  {
+    period: 'MAI 2021 — MAI 2023',
+    role: 'Desenvolvedor Web / Analista de Integrações',
+    company: 'CBMERJ · Híbrido',
+    summary: 'APIs, sistemas legados, serviços SOAP/REST, tratamento de dados e logs estruturados.',
+  },
+  {
+    period: 'MAI 2018 — MAI 2021',
+    role: 'Analista de Suporte II',
+    company: 'CBMERJ · Presencial',
+    summary: 'Atendimento a usuários, monitoramento, SLAs, VMware e gerenciamento de identidades.',
+  },
+];
+
+const academicEducation = [
+  { title: 'Graduação em Defesa Cibernética', detail: 'Concluída em 2023' },
+  { title: 'Inteligência Competitiva e Contrainteligência Corporativa', detail: 'Pós-graduação · 2024' },
+  { title: 'Cybersecurity: Detecção de Ameaças e Proteção de Sistemas', detail: 'Pós-graduação · 2024' },
+  { title: 'Cybercrime e Cybersecurity: Prevenção e Investigação', detail: 'Pós-graduação · 2024' },
 ];
 
 function normalizeSearch(value: string) {
@@ -92,23 +127,23 @@ export default function Sobre() {
           <span className="eyebrow">Sobre mim</span>
           <h1>Igo Quaresma</h1>
           <p className="lead">
-            Desenvolvedor Full Stack com experiência em desenvolvimento de aplicações
-            corporativas, integrações de sistemas, APIs REST e infraestrutura em nuvem.
+            Desenvolvedor Full Stack e analista de sistemas com experiência em aplicações
+            corporativas, integrações, APIs REST, sustentação e infraestrutura em nuvem.
           </p>
           <p>
-            Atualmente atuo com foco no ecossistema Salesforce, desenvolvendo competências
-            em Apex, Salesforce Flow, Lightning Web Components, Agentforce, Data Cloud e
-            automação de processos de negócios.
+            Minha trajetória começou próxima de quem usa a tecnologia: no suporte, na análise
+            de incidentes e no funcionamento diário dos sistemas. Essa base acompanha meu
+            trabalho como desenvolvedor e ajuda a transformar necessidades em soluções práticas.
           </p>
           <p>
-            Sou Agentblazer Champion 2026, certificado pelo programa Salesforce Developer
-            Core da OSF Digital e formado pelo BALF360, programa intensivo de formação
-            Salesforce da Reforce Academy.
+            Atuei com aplicações corporativas, integrações, infraestrutura em nuvem e equipes
+            multidisciplinares. No ecossistema Salesforce, aprofundo essa experiência por meio
+            de formações e projetos em Apex, Flow, Lightning Web Components, Agentforce,
+            Data Cloud e automação de processos de negócio.
           </p>
           <p>
-            Minha trajetória combina desenvolvimento de software, engenharia de qualidade,
-            cibersegurança e arquitetura de soluções, permitindo uma visão abrangente de
-            segurança, escalabilidade e entrega de valor em ambientes corporativos.
+            A formação em Defesa Cibernética e as especializações em segurança ampliam minha
+            visão sobre proteção de dados, investigação, confiabilidade e sustentação de aplicações.
           </p>
           <p>
             Também estou iniciando estudos em COBOL, com foco em manutenção,
@@ -143,6 +178,7 @@ export default function Sobre() {
                 {link.label}
               </a>
             ))}
+            <a href={`${assetBase}curriculo.html`}>Currículo completo</a>
           </div>
 
           <p className="availability">
@@ -157,14 +193,49 @@ export default function Sobre() {
         </article>
       </div>
 
+      <section className="about-background" aria-labelledby="professional-history-title">
+        <div className="about-background-heading">
+          <span className="eyebrow">Experiência e formação</span>
+          <h2 id="professional-history-title">Trajetória profissional</h2>
+          <p>
+            Experiência profissional separada dos projetos e programas de formação,
+            conforme o currículo atualizado.
+          </p>
+        </div>
+
+        <div className="professional-history">
+          {professionalHistory.map((experience) => (
+            <article key={`${experience.period}-${experience.company}`}>
+              <span>{experience.period}</span>
+              <h3>{experience.role}</h3>
+              <strong>{experience.company}</strong>
+              <p>{experience.summary}</p>
+            </article>
+          ))}
+        </div>
+
+        <div className="academic-education">
+          <h2>Formação acadêmica</h2>
+          <div>
+            {academicEducation.map((education) => (
+              <article key={education.title}>
+                <h3>{education.title}</h3>
+                <p>{education.detail}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="credential-directory" aria-labelledby="credential-directory-title">
         <div className="credential-directory-heading">
           <div>
             <span className="eyebrow">Aprendizado contínuo</span>
             <h2 id="credential-directory-title">Certificações, certificados e formações</h2>
             <p>
-              Um inventário organizado da minha trajetória de estudos, atualizado conforme
-              novas credenciais são conquistadas.
+              Certificações, programas de formação, cursos, reconhecimentos e participações
+              apresentados de acordo com sua natureza. OSF Digital, BALF360 e Sottelli são
+              programas de formação, não certificações oficiais Salesforce.
             </p>
           </div>
           <dl className="credential-stats">
@@ -216,7 +287,12 @@ export default function Sobre() {
                 </div>
                 <ul>
                   {group.items.map((credential) => (
-                    <li key={credential.title}>{credential.title}</li>
+                    <li key={credential.title}>
+                      <strong>{credential.title}</strong>
+                      <span>
+                        {[credential.kind, ...(credential.details ?? [])].join(' · ')}
+                      </span>
+                    </li>
                   ))}
                 </ul>
               </article>

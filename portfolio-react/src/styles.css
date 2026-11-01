@@ -295,6 +295,81 @@ a {
   box-shadow: 0 18px 48px rgba(0, 0, 0, 0.24);
 }
 
+.about-background {
+  width: min(1180px, calc(100% - 32px));
+  margin: 72px auto 0;
+  color: #f7f7f7;
+}
+
+.about-background-heading {
+  max-width: 760px;
+}
+
+.about-background-heading h2,
+.academic-education > h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+}
+
+.about-background-heading p {
+  margin: 12px 0 0;
+  color: #bfc6d8;
+  line-height: 1.65;
+}
+
+.professional-history {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.professional-history article,
+.academic-education article {
+  padding: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  background: #0d1425;
+}
+
+.professional-history article > span {
+  color: #f5b400;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.professional-history h3,
+.academic-education h3 {
+  margin: 10px 0 4px;
+  color: #ffffff;
+  font-size: 1.08rem;
+  line-height: 1.4;
+}
+
+.professional-history strong {
+  color: #8ed5cd;
+  font-size: 0.9rem;
+}
+
+.professional-history p,
+.academic-education p {
+  margin: 12px 0 0;
+  color: #bfc6d8;
+  line-height: 1.6;
+}
+
+.academic-education {
+  margin-top: 40px;
+}
+
+.academic-education > div {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 20px;
+}
+
 .credential-directory {
   width: min(1180px, calc(100% - 32px));
   margin: 72px auto 48px;
@@ -481,6 +556,23 @@ a {
   color: #d8dbe8;
   font-size: 0.94rem;
   line-height: 1.55;
+}
+
+.credential-group li strong,
+.credential-group li span {
+  display: block;
+}
+
+.credential-group li strong {
+  color: #ffffff;
+  font-weight: 750;
+}
+
+.credential-group li span {
+  margin-top: 3px;
+  color: #9ca7bc;
+  font-size: 0.82rem;
+  line-height: 1.45;
 }
 
 .credential-group li::before {
@@ -3232,6 +3324,10 @@ a {
     min-width: 0;
   }
 
+  .curriculum-link {
+    grid-column: 1 / -1;
+  }
+
   .hero-image {
     aspect-ratio: 3 / 1;
   }
@@ -3252,7 +3348,9 @@ a {
 
   .credential-directory-heading,
   .credential-toolbar,
-  .credential-groups {
+  .credential-groups,
+  .professional-history,
+  .academic-education > div {
     grid-template-columns: 1fr;
   }
 

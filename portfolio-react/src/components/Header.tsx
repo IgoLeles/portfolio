@@ -27,6 +27,9 @@ export default function Header() {
               {link.label}
             </NavLink>
           ))}
+          <a className="nav-link curriculum-link" href={`${assetBase}curriculo.html`}>
+            Currículo
+          </a>
         </nav>
       </div>
     </header>
