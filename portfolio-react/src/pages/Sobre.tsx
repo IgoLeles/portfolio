@@ -10,9 +10,9 @@ import {
 type CategoryFilter = 'Todas as categorias' | CredentialCategory;
 
 const skills = [
-  'Salesforce Development', 'Apex', 'Flow', 'LWC', 'SOQL', 'SOSL',
-  'Agentforce', 'Data Cloud', 'APIs REST', 'Node.js', 'Angular',
-  'JavaScript', 'AWS', 'DevSecOps', 'QA Automation', 'COBOL (em estudo)',
+  'Salesforce Development', 'Apex', 'LWC', 'Flow', 'SOQL', 'SOSL',
+  'Experience Cloud', 'Agentforce', 'Data Cloud', 'Copado', 'APIs REST',
+  'Node.js', 'Angular', 'JavaScript', 'AWS', 'DevSecOps', 'QA Automation',
 ];
 
 const credentialHighlights = [
@@ -22,6 +22,7 @@ const credentialHighlights = [
   'Flosum Certified Expert',
   'OSF Academy - Salesforce Developer Core',
   'Formação Salesforce BALF360 - Operação Vértice',
+  'Sottelli Training Force - Administração Salesforce',
   'Agentblazer Champion 2026',
 ];
 
@@ -34,10 +35,16 @@ const links = [
 
 const professionalHistory = [
   {
+    period: 'NOV 2026 — ATUAL',
+    role: 'Salesforce Developer',
+    company: 'Inetum · Remoto',
+    summary: 'Desenvolvimento e sustentação Salesforce: Apex, Triggers, Flows e LWC, segmentação de regras por RecordType, portal do cliente (Experience Cloud) e arquitetura de Case, Omni-Channel e Entitlements.',
+  },
+  {
     period: 'AGO 2024 — JUN 2026',
-    role: 'Desenvolvedor Full Stack',
+    role: 'Analista de Desenvolvimento de Sistemas SR I',
     company: 'Solutic Group · Remoto',
-    summary: 'Aplicações Angular e Node.js, autenticação JWT, integrações, AWS, testes e apoio técnico às decisões de arquitetura.',
+    summary: 'Cliente: Petrobras (Well Management). Aplicações Angular e Node.js, autenticação JWT, integrações, AWS, testes e apoio técnico às decisões de arquitetura.',
   },
   {
     period: 'MAI 2023 — MAI 2024',
@@ -48,13 +55,13 @@ const professionalHistory = [
   {
     period: 'MAI 2021 — MAI 2023',
     role: 'Desenvolvedor Web / Analista de Integrações',
-    company: 'CBMERJ · Híbrido',
+    company: 'NTL Nova Tecnologia · alocado no CBMERJ · Híbrido',
     summary: 'APIs, sistemas legados, serviços SOAP/REST, tratamento de dados e logs estruturados.',
   },
   {
     period: 'MAI 2018 — MAI 2021',
     role: 'Analista de Suporte II',
-    company: 'CBMERJ · Presencial',
+    company: 'NTL Nova Tecnologia · alocado no CBMERJ · Presencial',
     summary: 'Atendimento a usuários, monitoramento, SLAs, VMware e gerenciamento de identidades.',
   },
 ];
@@ -127,8 +134,8 @@ export default function Sobre() {
           <span className="eyebrow">Sobre mim</span>
           <h1>Igo Quaresma</h1>
           <p className="lead">
-            Desenvolvedor Full Stack e analista de sistemas com experiência em aplicações
-            corporativas, integrações, APIs REST, sustentação e infraestrutura em nuvem.
+            Salesforce Developer na Inetum, com quase 20 anos em TI, do suporte e infraestrutura ao
+            desenvolvimento full stack, e formação em Defesa Cibernética.
           </p>
           <p>
             Minha trajetória começou próxima de quem usa a tecnologia: no suporte, na análise
@@ -136,21 +143,17 @@ export default function Sobre() {
             trabalho como desenvolvedor e ajuda a transformar necessidades em soluções práticas.
           </p>
           <p>
-            Atuei com aplicações corporativas, integrações, infraestrutura em nuvem e equipes
-            multidisciplinares. No ecossistema Salesforce, aprofundo essa experiência por meio
-            de formações e projetos em Apex, Flow, Lightning Web Components, Agentforce,
-            Data Cloud e automação de processos de negócio.
+            Hoje desenvolvo e sustento soluções Salesforce na Inetum, com Apex, Triggers, Flows,
+            LWC e Experience Cloud, em processos de atendimento como Case, Omni-Channel e
+            Entitlements. Antes, atuei no projeto Petrobras Well Management pela Solutic Group,
+            com Angular, Node.js, JWT e AWS.
           </p>
           <p>
             A formação em Defesa Cibernética e as especializações em segurança ampliam minha
             visão sobre proteção de dados, investigação, confiabilidade e sustentação de aplicações.
           </p>
           <p>
-            Também estou iniciando estudos em COBOL, com foco em manutenção,
-            modernização e integração de sistemas legados em ambientes corporativos.
-          </p>
-          <p>
-            Também integro o Comitê Público do Instituto de Defesa Cibernética{' '}(
+            Integro o Comitê Público do Instituto de Defesa Cibernética{' '}(
             <a href="https://idciber.org/" target="_blank" rel="noreferrer">IDCiber</a>
             ), contribuindo com uma visão voltada à cultura de segurança digital,
             colaboração institucional e defesa cibernética responsável.
@@ -182,7 +185,7 @@ export default function Sobre() {
           </div>
 
           <p className="availability">
-            Aberto a oportunidades remotas, vagas internacionais e posições focadas em Salesforce.
+            Aberto a conversas sobre Salesforce, AppSec e Agentforce.
           </p>
 
           <img
