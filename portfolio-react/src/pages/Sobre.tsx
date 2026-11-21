@@ -19,6 +19,7 @@ const credentialHighlights = [
   'Copado Certified Copado Data 360',
   'Copado Certified Agentia Advanced',
   'Copado Certified Copado AI',
+  'Flosum Certified Professional',
   'Flosum Certified Expert',
   'OSF Academy - Salesforce Developer Core',
   'Formação Salesforce BALF360 - Operação Vértice',
