@@ -33,6 +33,7 @@ const verifiedBadges = [
   { title: 'Copado AI', image: 'copado-ai' },
   { title: 'Flosum Professional', image: 'flosum-professional' },
   { title: 'Flosum Expert', image: 'flosum-expert' },
+  { title: 'Agentblazer Champion 2026', image: 'agentblazer-champion' },
 ];
 
 const links = [

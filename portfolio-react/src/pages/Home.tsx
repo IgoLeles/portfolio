@@ -5,7 +5,7 @@ const highlights = [
   { title: 'Copado Data 360', issuer: 'Copado', badge: 'copado-data360' },
   { title: 'Copado Agentia Advanced', issuer: 'Copado', badge: 'copado-agentia' },
   { title: 'Flosum Certified Expert', issuer: 'Flosum', badge: 'flosum-expert' },
-  { title: 'Agentblazer Champion 2026', issuer: 'Salesforce', badge: null },
+  { title: 'Agentblazer Champion 2026', issuer: 'Salesforce', badge: 'agentblazer-champion' },
 ];
 
 const stack = [
