@@ -135,7 +135,7 @@ export default function Sobre() {
           <span className="eyebrow">Sobre mim</span>
           <h1>Igo Quaresma</h1>
           <p className="lead">
-            Salesforce Developer na Inetum, com quase 20 anos em TI, do suporte e infraestrutura ao
+            Salesforce Developer com quase 20 anos em TI, do suporte e infraestrutura ao
             desenvolvimento full stack, e formação em Defesa Cibernética.
           </p>
           <p>
@@ -144,7 +144,7 @@ export default function Sobre() {
             trabalho como desenvolvedor e ajuda a transformar necessidades em soluções práticas.
           </p>
           <p>
-            Hoje desenvolvo e sustento soluções Salesforce na Inetum, com Apex, Triggers, Flows,
+            Hoje desenvolvo e sustento soluções Salesforce com Apex, Triggers, Flows,
             LWC e Experience Cloud, em processos de atendimento como Case, Omni-Channel e
             Entitlements. Antes, atuei no projeto Petrobras Well Management pela Solutic Group,
             com Angular, Node.js, JWT e AWS.

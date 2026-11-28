@@ -2,8 +2,9 @@ import { ExternalLink } from 'lucide-react';
 
 export default function Contato() {
   return (
-    <section className="contact-view">
-      <h1>Entre em Contato</h1>
+    <section className="contact-view glass">
+      <span className="kicker">Contato</span>
+      <h1>Vamos conversar sobre o seu projeto?</h1>
       <div className="contact-links">
         <a
           href="https://www.linkedin.com/in/igoquaresma/"
