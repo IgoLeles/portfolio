@@ -27,6 +27,15 @@ const credentialHighlights = [
   'Agentblazer Champion 2026',
 ];
 
+const verifiedBadges = [
+  { title: 'Copado Data 360', image: 'copado-data360' },
+  { title: 'Copado Agentia Advanced', image: 'copado-agentia' },
+  { title: 'Copado AI', image: 'copado-ai' },
+  { title: 'Flosum Professional', image: 'flosum-professional' },
+  { title: 'Flosum Expert', image: 'flosum-expert' },
+  { title: 'Agentblazer Champion 2026', image: 'agentblazer-champion' },
+];
+
 const links = [
   { label: 'Portfólio Salesforce', href: 'https://github.com/IgoLeles/salesforce-dev-core-portfolio' },
   { label: 'Trailblazer', href: 'https://salesforce.com/trailblazer/igoquaresma' },
@@ -164,6 +173,25 @@ export default function Sobre() {
             <div className="skill-list">
               {skills.map((skill) => <span key={skill}>{skill}</span>)}
             </div>
+          </div>
+
+          <div className="about-section">
+            <h2>Credenciais verificadas</h2>
+            <ul className="badge-grid">
+              {verifiedBadges.map((badge) => (
+                <li key={badge.title}>
+                  <img
+                    src={`${assetBase}img/badges/${badge.image}.png`}
+                    alt={`Badge ${badge.title}`}
+                    loading="lazy"
+                  />
+                  <strong>{badge.title}</strong>
+                </li>
+              ))}
+            </ul>
+            <a className="badge-credly" href="https://credly.com/users/ilq" target="_blank" rel="noreferrer">
+              Verificar no Credly →
+            </a>
           </div>
 
           <div className="about-section">

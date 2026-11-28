@@ -2,10 +2,10 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, BadgeCheck, Cloud, ShieldCheck } from 'lucide-react';
 
 const highlights = [
-  { title: 'Copado Data 360', issuer: 'Copado' },
-  { title: 'Flosum Certified Expert', issuer: 'Flosum' },
-  { title: 'Agentblazer Champion 2026', issuer: 'Salesforce' },
-  { title: 'Salesforce Developer Core', issuer: 'OSF Academy' },
+  { title: 'Copado Data 360', issuer: 'Copado', badge: 'copado-data360' },
+  { title: 'Copado Agentia Advanced', issuer: 'Copado', badge: 'copado-agentia' },
+  { title: 'Flosum Certified Expert', issuer: 'Flosum', badge: 'flosum-expert' },
+  { title: 'Agentblazer Champion 2026', issuer: 'Salesforce', badge: 'agentblazer-champion' },
 ];
 
 const stack = [
@@ -91,6 +91,9 @@ export default function Home() {
             <ul>
               {highlights.map((item) => (
                 <li key={item.title}>
+                  {item.badge && (
+                    <img src={`${assetBase}img/badges/${item.badge}.png`} alt="" className="highlight-badge" loading="lazy" />
+                  )}
                   <strong>{item.title}</strong>
                   <span>{item.issuer}</span>
                 </li>
