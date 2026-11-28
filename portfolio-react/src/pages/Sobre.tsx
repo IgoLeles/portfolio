@@ -28,11 +28,11 @@ const credentialHighlights = [
 ];
 
 const verifiedBadges = [
-  { title: 'Copado Data 360', validity: 'Válida até 01/2028', image: 'copado-data360' },
-  { title: 'Copado Agentia Advanced', validity: 'Válida até 01/2028', image: 'copado-agentia' },
-  { title: 'Copado AI', validity: 'Válida até 10/2027', image: 'copado-ai' },
-  { title: 'Flosum Professional', validity: 'Válida até 09/2027', image: 'flosum-professional' },
-  { title: 'Flosum Expert', validity: 'Válida até 09/2027', image: 'flosum-expert' },
+  { title: 'Copado Data 360', image: 'copado-data360' },
+  { title: 'Copado Agentia Advanced', image: 'copado-agentia' },
+  { title: 'Copado AI', image: 'copado-ai' },
+  { title: 'Flosum Professional', image: 'flosum-professional' },
+  { title: 'Flosum Expert', image: 'flosum-expert' },
 ];
 
 const links = [
@@ -185,7 +185,6 @@ export default function Sobre() {
                     loading="lazy"
                   />
                   <strong>{badge.title}</strong>
-                  <small>{badge.validity}</small>
                 </li>
               ))}
             </ul>
