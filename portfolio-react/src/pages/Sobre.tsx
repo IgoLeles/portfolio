@@ -27,6 +27,14 @@ const credentialHighlights = [
   'Agentblazer Champion 2026',
 ];
 
+const verifiedBadges = [
+  { title: 'Copado Data 360', validity: 'Válida até 01/2028', image: 'copado-data360' },
+  { title: 'Copado Agentia Advanced', validity: 'Válida até 01/2028', image: 'copado-agentia' },
+  { title: 'Copado AI', validity: 'Válida até 10/2027', image: 'copado-ai' },
+  { title: 'Flosum Professional', validity: 'Válida até 09/2027', image: 'flosum-professional' },
+  { title: 'Flosum Expert', validity: 'Válida até 09/2027', image: 'flosum-expert' },
+];
+
 const links = [
   { label: 'Portfólio Salesforce', href: 'https://github.com/IgoLeles/salesforce-dev-core-portfolio' },
   { label: 'Trailblazer', href: 'https://salesforce.com/trailblazer/igoquaresma' },
@@ -164,6 +172,26 @@ export default function Sobre() {
             <div className="skill-list">
               {skills.map((skill) => <span key={skill}>{skill}</span>)}
             </div>
+          </div>
+
+          <div className="about-section">
+            <h2>Credenciais verificadas</h2>
+            <ul className="badge-grid">
+              {verifiedBadges.map((badge) => (
+                <li key={badge.title}>
+                  <img
+                    src={`${assetBase}img/badges/${badge.image}.png`}
+                    alt={`Badge ${badge.title}`}
+                    loading="lazy"
+                  />
+                  <strong>{badge.title}</strong>
+                  <small>{badge.validity}</small>
+                </li>
+              ))}
+            </ul>
+            <a className="badge-credly" href="https://credly.com/users/ilq" target="_blank" rel="noreferrer">
+              Verificar no Credly →
+            </a>
           </div>
 
           <div className="about-section">

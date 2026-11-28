@@ -327,7 +327,9 @@ body {
   background: rgba(255, 255, 255, 0.05);
 }
 
-.highlight-card strong { color: var(--text-strong); font-weight: 500; }
+.highlight-card li { align-items: center; }
+.highlight-card strong { flex: 1; color: var(--text-strong); font-weight: 500; }
+.highlight-badge { width: 32px; height: 32px; object-fit: contain; flex: 0 0 auto; }
 .highlight-card li span { color: var(--sf-soft); font-size: 0.78rem; white-space: nowrap; }
 
 .stack-strip {
@@ -794,6 +796,40 @@ body {
 .credential-group-title span { background: rgba(245, 180, 0, 0.16); color: var(--gold-soft); }
 .credential-group li { border-color: rgba(255, 255, 255, 0.07); }
 .credential-group li strong { color: var(--text-strong); font-weight: 500; }
+
+.badge-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+.badge-grid li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 16px 12px;
+  border-radius: var(--radius-md);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  text-align: center;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.badge-grid li:hover { transform: translateY(-3px); background: rgba(255, 255, 255, 0.1); }
+.badge-grid img { width: 88px; height: 88px; object-fit: contain; }
+.badge-grid strong { color: var(--text-strong); font-size: 0.88rem; font-weight: 500; line-height: 1.3; }
+.badge-grid small { color: var(--text-muted); font-size: 0.75rem; }
+.badge-credly { display: inline-block; margin-top: 12px; color: var(--gold); font-size: 0.9rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  .badge-grid li { transition: none; }
+  .badge-grid li:hover { transform: none; }
+}
 
 /* ---------- Contato ---------- */
 
