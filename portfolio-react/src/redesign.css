@@ -808,6 +808,13 @@ body {
 
 .contact-links { justify-content: center; }
 
+@media (min-width: 761px) {
+  .contact-view { padding: 72px 48px; }
+  .contact-view .kicker { margin-bottom: 20px; font-size: 1rem; letter-spacing: 0.14em; }
+  .contact-view h1 { max-width: 760px; margin: 0 auto 44px; line-height: 1.12; }
+  .contact-links { gap: 20px; }
+}
+
 .contact-button {
   border-radius: 999px;
   border: 1px solid var(--glass-border);
