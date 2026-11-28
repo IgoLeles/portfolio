@@ -1,171 +1,268 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const projects = [
+type Track = 'sf' | 'sec' | 'qa';
+type Filter = 'all' | Track;
+
+type CaseCard = {
+  id: string;
+  track: Track;
+  title: string;
+  hook: string;
+  description: string;
+  stack: string;
+  href: string;
+  cta: string;
+  qaHref?: string;
+};
+
+const tracks: Record<Track, { name: string; code: string }> = {
+  sf: { name: 'Salesforce', code: 'SF' },
+  sec: { name: 'AppSec', code: 'SEC' },
+  qa: { name: 'Front + QA', code: 'QA' },
+};
+
+const cases: CaseCard[] = [
   {
-    level: 'Iniciante',
-    title: 'Landing Page Responsiva - OSF Academy',
-    description: 'Página de apresentação do portfólio Salesforce Developer Core, destacando entregas, tecnologias e aprendizados.',
-    stack: 'React, TypeScript, CSS',
-    href: '/projetos/osf-academy',
-  },
-  {
-    level: 'Intermediário',
-    title: 'BALF360 - Jornada Salesforce',
+    id: 'balf',
+    track: 'sf',
+    title: 'BALF360 — Operação Vértice',
+    hook: 'Uma jornada Salesforce em fases, do Flow ao Agentforce.',
     description: 'Case visual sobre a Operação Vértice, reunindo formação, gamificação, conquistas e prática com Flow, Data 360, Agentforce e Apex.',
-    stack: 'Salesforce, Agentforce, Data 360',
+    stack: 'Salesforce · Agentforce · Data 360 · Apex',
     href: '/projetos/balf360',
     cta: 'Ver case',
   },
   {
-    level: 'Iniciante',
-    title: 'Calculadora Básica',
-    description: 'Interface para operações simples, praticando eventos, estados e organização de componentes.',
-    stack: 'JavaScript, React',
-    href: '/projetos/calculadora',
-    cta: 'Testar projeto',
-  },
-  {
-    level: 'Iniciante',
-    title: 'Salvador de Abas',
-    description: 'Extensão para selecionar abas abertas e exportar links organizados em um arquivo HTML.',
-    stack: 'JavaScript, Chrome Extensions',
-    href: '/projetos/salvador-de-abas',
-    cta: 'Ver case',
-  },
-  {
-    level: 'Intermediário',
-    title: 'Lista de Tarefas',
-    description: 'Cadastro, conclusão, filtro e remoção de tarefas, com dados salvos no navegador.',
-    stack: 'React, TypeScript, LocalStorage',
-    href: '/projetos/lista-de-tarefas',
-    cta: 'Testar projeto',
-  },
-  {
-    level: 'Intermediário',
-    title: 'QA da Lista de Tarefas',
-    description: 'Case de qualidade com estratégia de testes, matriz de riscos, cenários funcionais, relatório de defeitos e automação.',
-    stack: 'QA, Vitest, Testing Library',
-    href: '/projetos/qa-lista-de-tarefas',
-    cta: 'Ver case de QA',
-  },
-  {
-    level: 'Intermediário',
-    title: 'Buscador de CEP',
-    description: 'Consulta de endereço por CEP, exibindo estados de carregamento, erro e resultado.',
-    stack: 'React, TypeScript, API',
-    href: '/projetos/buscador-de-cep',
-    cta: 'Testar projeto',
-  },
-  {
-    level: 'Intermediário',
-    title: 'QA de API - Buscador de CEP',
-    description: 'Case de testes de API e interface cobrindo contrato, respostas válidas, erros, indisponibilidade e integração com mapa.',
-    stack: 'QA de API, Vitest, Mock de Serviços',
-    href: '/projetos/qa-buscador-de-cep',
-    cta: 'Ver case de QA',
-  },
-  {
-    level: 'Avançado',
+    id: 'app',
+    track: 'sf',
     title: 'Salesforce Portfolio App',
-    description: 'Case de portfólio dentro da Salesforce, com objetos customizados, relatórios, dashboard e publicação via Experience Cloud.',
-    stack: 'Salesforce Admin, Experience Cloud',
+    hook: 'Um portfólio construído dentro da própria org.',
+    description: 'Aplicação de portfólio dentro do Salesforce, com objetos customizados, relatórios, dashboard e publicação via Experience Cloud.',
+    stack: 'Salesforce Admin · Experience Cloud',
     href: '/projetos/salesforce-portfolio-app',
     cta: 'Ver arquitetura',
   },
   {
-    level: 'Avançado',
-    title: 'Checklist DevSecOps para Deploy',
-    description: 'Simulador defensivo para revisar secrets, dependências, permissões, logs e dados públicos antes da publicação.',
-    stack: 'React, TypeScript, DevSecOps',
-    href: '/projetos/devsecops-checklist',
-    cta: 'Testar checklist',
-  },
-  {
-    level: 'Intermediário',
-    title: 'Gerador de Política de Senhas',
-    description: 'Ferramenta educativa para criar diretrizes de senha, MFA e resposta a credenciais vazadas sem coletar dados reais.',
-    stack: 'React, TypeScript, Segurança',
-    href: '/projetos/politica-de-senhas',
-    cta: 'Gerar política',
-  },
-  {
-    level: 'Avançado',
-    title: 'Simulador de Classificação de Risco',
-    description: 'Ferramenta defensiva para classificar ativos fictícios por impacto, probabilidade e controles recomendados.',
-    stack: 'React, TypeScript, Gestão de Risco',
-    href: '/projetos/classificacao-de-risco',
-    cta: 'Simular risco',
-  },
-  {
-    level: 'Avançado',
+    id: 'headers',
+    track: 'sec',
     title: 'Security Headers Analyzer',
-    description: 'Simulador guiado para revisar cabeçalhos HTTP de segurança sem consultar sites reais ou depender de CORS.',
-    stack: 'React, TypeScript, AppSec',
+    hook: 'Quais headers HTTP faltam, e por que isso importa.',
+    description: 'Simulador guiado para revisar headers HTTP de segurança por cenários, sem consultar sites reais nem depender de CORS.',
+    stack: 'React · TypeScript · AppSec',
     href: '/projetos/security-headers',
     cta: 'Analisar cenário',
   },
   {
-    level: 'Avançado',
+    id: 'devsec',
+    track: 'sec',
+    title: 'Checklist DevSecOps',
+    hook: 'O que revisar antes de apertar deploy.',
+    description: 'Simulador defensivo para revisar segredos, dependências, permissões, logs e dados públicos antes de publicar.',
+    stack: 'React · TypeScript · DevSecOps',
+    href: '/projetos/devsecops-checklist',
+    cta: 'Testar checklist',
+  },
+  {
+    id: 'dash',
+    track: 'qa',
     title: 'Dashboard Financeiro',
-    description: 'Painel com cards, filtros e gráficos para acompanhar entradas, saídas e saldo mensal.',
-    stack: 'React, TypeScript, Charts',
+    hook: 'Cada número do painel bate com as transações.',
+    description: 'Painel com cards, filtros e gráficos para acompanhar receitas, despesas e saldo mensal, com um case de QA que reconcilia KPIs, filtros, gráficos e transações.',
+    stack: 'React · TypeScript · Charts · Vitest',
     href: '/projetos/dashboard-financeiro',
     cta: 'Testar dashboard',
+    qaHref: '/projetos/qa-dashboard-financeiro',
   },
   {
-    level: 'Avançado',
-    title: 'QA do Dashboard Financeiro',
-    description: 'Case de qualidade de dados com reconciliação entre KPIs, filtros, gráficos e movimentações detalhadas.',
-    stack: 'QA de Dados, Vitest, Reconciliação',
-    href: '/projetos/qa-dashboard-financeiro',
-    cta: 'Ver case de QA',
-  },
-  {
-    level: 'Avançado',
+    id: 'shop',
+    track: 'qa',
     title: 'Mini E-commerce',
-    description: 'Catálogo, busca, carrinho e resumo de compra para demonstrar fluxo completo de interface.',
-    stack: 'React, TypeScript, Estado Global',
+    hook: 'Do catálogo ao checkout, testado de ponta a ponta.',
+    description: 'Catálogo, busca, carrinho e resumo de compra, com automação E2E cobrindo filtros, descontos e checkout simulado.',
+    stack: 'React · Estado global · Playwright',
     href: '/projetos/mini-ecommerce',
     cta: 'Testar loja',
+    qaHref: '/projetos/qa-mini-ecommerce',
   },
   {
-    level: 'Avançado',
-    title: 'QA E2E - Mini E-commerce',
-    description: 'Automação em navegador real cobrindo catálogo, busca, filtros, carrinho, desconto e finalização simulada.',
-    stack: 'Playwright, E2E, Regras de Negócio',
-    href: '/projetos/qa-mini-ecommerce',
-    cta: 'Ver case de QA',
+    id: 'risk',
+    track: 'sec',
+    title: 'Classificação de risco',
+    hook: 'Impacto × probabilidade, com controles sugeridos.',
+    description: 'Ferramenta defensiva que classifica ativos fictícios por impacto e probabilidade e sugere controles.',
+    stack: 'React · TypeScript · Gestão de risco',
+    href: '/projetos/classificacao-de-risco',
+    cta: 'Simular risco',
+  },
+  {
+    id: 'cep',
+    track: 'qa',
+    title: 'Buscador de CEP',
+    hook: 'E quando a API cai? Também está testado.',
+    description: 'Consulta de endereço por CEP com estados de carregamento, erro e resultado, mais QA de contrato, respostas, falhas e indisponibilidade do serviço.',
+    stack: 'React · API · Vitest · Mocks',
+    href: '/projetos/buscador-de-cep',
+    cta: 'Testar projeto',
+    qaHref: '/projetos/qa-buscador-de-cep',
+  },
+  {
+    id: 'pass',
+    track: 'sec',
+    title: 'Política de senhas',
+    hook: 'Diretrizes de senha e MFA, sem coletar nada.',
+    description: 'Ferramenta educativa para montar diretrizes de senha, MFA e resposta a credenciais vazadas, sem coletar dados reais.',
+    stack: 'React · TypeScript · Segurança',
+    href: '/projetos/politica-de-senhas',
+    cta: 'Gerar política',
   },
 ];
 
+const lab = [
+  { title: 'Landing page OSF Academy', stack: 'React · TypeScript · CSS', href: '/projetos/osf-academy' },
+  { title: 'Lista de tarefas', stack: 'React · LocalStorage', href: '/projetos/lista-de-tarefas' },
+  { title: 'QA da lista de tarefas', stack: 'Vitest · Testing Library', href: '/projetos/qa-lista-de-tarefas' },
+  { title: 'Salvador de abas', stack: 'JavaScript · Chrome Extensions', href: '/projetos/salvador-de-abas' },
+  { title: 'Calculadora básica', stack: 'JavaScript · React', href: '/projetos/calculadora' },
+];
+
+const filters: { id: Filter; label: string }[] = [
+  { id: 'all', label: 'Todos' },
+  { id: 'sf', label: 'Salesforce' },
+  { id: 'sec', label: 'AppSec' },
+  { id: 'qa', label: 'Front + QA' },
+];
+
 export default function Projetos() {
+  const assetBase = import.meta.env.BASE_URL;
+  const [filter, setFilter] = useState<Filter>('all');
+  const [openCard, setOpenCard] = useState<string | null>(null);
+  const [labOpen, setLabOpen] = useState(false);
+
+  const visible = cases.filter((item) => filter === 'all' || item.track === filter);
+
   return (
-    <section className="projects-view">
-      <h1>Projetos</h1>
-      <p className="projects-intro">
-        Uma seleção de ideias para evoluir o portfólio, saindo de projetos simples até
-        experiências mais completas.
-      </p>
-      <div className="project-grid">
-        {projects.map((project) => (
-          project.href ? (
-            <Link to={project.href} className="project-card project-card-link" key={project.title}>
-              <span className="project-level">{project.level}</span>
-              <h2>{project.title}</h2>
-              <p>{project.description}</p>
-              <small>{project.stack}</small>
-              <strong>{project.cta ?? 'Ver landing page'}</strong>
-            </Link>
-          ) : (
-            <article className="project-card" key={project.title}>
-              <span className="project-level">{project.level}</span>
-              <h2>{project.title}</h2>
-              <p>{project.description}</p>
-              <small>{project.stack}</small>
-            </article>
-          )
+    <section className="cases-page">
+      <header className="page-hero">
+        <span className="kicker">Cases</span>
+        <h1>Escolha uma carta</h1>
+        <p>
+          Cada carta é um case. Toque para virar e ver stack, testes e links. O naipe indica a
+          trilha: Salesforce, AppSec ou Front + QA.
+        </p>
+      </header>
+
+      <div className="chip-row" role="group" aria-label="Filtrar por trilha">
+        {filters.map((item) => (
+          <button
+            type="button"
+            key={item.id}
+            className={`chip${filter === item.id ? ' chip-on' : ''}`}
+            aria-pressed={filter === item.id}
+            onClick={() => {
+              setFilter(item.id);
+              setOpenCard(null);
+            }}
+          >
+            {item.label}
+          </button>
         ))}
       </div>
+
+      <p className="swipe-hint" aria-hidden="true">Deslize para ver mais cartas →</p>
+
+      <div className="deck">
+        {visible.map((item) => {
+          const track = tracks[item.track];
+          const flipped = openCard === item.id;
+          const toggle = () => setOpenCard(flipped ? null : item.id);
+
+          return (
+            <div className={`deck-card tone-${item.track}`} key={item.id}>
+              <div className={`deck-inner${flipped ? ' is-flipped' : ''}`}>
+                <button
+                  type="button"
+                  className="deck-face deck-front"
+                  onClick={toggle}
+                  aria-label={`Virar a carta ${item.title}`}
+                  aria-hidden={flipped}
+                  tabIndex={flipped ? -1 : 0}
+                >
+                  <span className="deck-top">
+                    <span className="card-index">
+                      <b>{track.code}</b>
+                      <i aria-hidden="true" />
+                    </span>
+                    {item.qaHref && <span className="qa-badge">Demo + QA</span>}
+                  </span>
+                  <img src={`${assetBase}img/cases/${item.id}.svg`} alt="" loading="lazy" />
+                  <span className="deck-title">{item.title}</span>
+                  <span className="deck-hook">{item.hook}</span>
+                  <span className="deck-hint">Toque para virar</span>
+                  <span className="card-index card-index-bottom" aria-hidden="true">
+                    <b>{track.code}</b>
+                    <i />
+                  </span>
+                </button>
+
+                <div className="deck-face deck-back" aria-hidden={!flipped}>
+                  <button
+                    type="button"
+                    className="deck-hit"
+                    onClick={toggle}
+                    aria-label={`Desvirar a carta ${item.title}`}
+                    tabIndex={flipped ? 0 : -1}
+                  />
+                  {flipped && (
+                    <div className="deck-back-content">
+                      <span className="track-badge">{track.name}</span>
+                      <h2>{item.title}</h2>
+                      <p>{item.description}</p>
+                      <span className="deck-label">Stack</span>
+                      <span className="deck-stack">{item.stack}</span>
+                      <div className="deck-actions">
+                        <Link to={item.href} className="btn-gold">{item.cta}</Link>
+                        {item.qaHref && (
+                          <Link to={item.qaHref} className="btn-outline">Ver QA</Link>
+                        )}
+                        <span className="deck-hint-back">Toque para desvirar</span>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
+      <section className="glass lab-panel" aria-labelledby="lab-title">
+        <div className="lab-head">
+          <div>
+            <h2 id="lab-title">Laboratório</h2>
+            <p>Exercícios de fundamentos: estado, eventos, testes e extensões de navegador.</p>
+          </div>
+          <button
+            type="button"
+            className="chip"
+            aria-expanded={labOpen}
+            aria-controls="lab-list"
+            onClick={() => setLabOpen((open) => !open)}
+          >
+            {labOpen ? 'Recolher' : `Mostrar ${lab.length} exercícios`}
+          </button>
+        </div>
+        {labOpen && (
+          <div className="lab-grid" id="lab-list">
+            {lab.map((item) => (
+              <Link to={item.href} key={item.href} className="lab-item">
+                <strong>{item.title}</strong>
+                <span>{item.stack}</span>
+              </Link>
+            ))}
+          </div>
+        )}
+      </section>
     </section>
   );
 }

@@ -27,6 +27,12 @@ export default function App() {
   return (
     <HashRouter>
       <div className="app-shell">
+        <div className="bg-orbs" aria-hidden="true">
+          <span />
+          <span />
+          <span />
+          <span />
+        </div>
         <Header />
         <main className="page-main">
           <Routes>
