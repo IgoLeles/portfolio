@@ -56,7 +56,7 @@ export default function Home() {
         <div className="home-hero-copy">
           <span className="status-pill glass">
             <span className="status-dot" aria-hidden="true" />
-            Salesforce Developer · Full Stack · Cybersecurity
+            <span className="role-line">Salesforce Developer · Cybersecurity · Full Stack</span>
           </span>
           <h1>
             Soluções <span className="gold">seguras</span>, testadas e prontas para produção.

@@ -169,6 +169,8 @@ export default function Projetos() {
         ))}
       </div>
 
+      <p className="swipe-hint" aria-hidden="true">Deslize para ver mais cartas →</p>
+
       <div className="deck">
         {visible.map((item) => {
           const track = tracks[item.track];
