@@ -139,9 +139,9 @@ export default function Sobre() {
             desenvolvimento full stack, e formação em Defesa Cibernética.
           </p>
           <p>
-            Minha trajetória começou próxima de quem usa a tecnologia: no suporte, na análise
-            de incidentes e no funcionamento diário dos sistemas. Essa base acompanha meu
-            trabalho como desenvolvedor e ajuda a transformar necessidades em soluções práticas.
+            Comecei no suporte, perto de quem usa a tecnologia, analisando incidentes e
+            acompanhando o funcionamento diário dos sistemas. Por isso, como desenvolvedor,
+            parto sempre da necessidade de quem vai usar a solução.
           </p>
           <p>
             Hoje desenvolvo e sustento soluções Salesforce com Apex, Triggers, Flows,
@@ -156,8 +156,7 @@ export default function Sobre() {
           <p>
             Integro o Comitê Público do Instituto de Defesa Cibernética{' '}(
             <a href="https://idciber.org/" target="_blank" rel="noreferrer">IDCiber</a>
-            ), contribuindo com uma visão voltada à cultura de segurança digital,
-            colaboração institucional e defesa cibernética responsável.
+            ), onde contribuo com temas de cultura de segurança digital.
           </p>
 
           <div className="about-section">
